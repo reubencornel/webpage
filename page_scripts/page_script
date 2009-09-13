@@ -40,6 +40,10 @@ ENDP
 BEGINP
 I added photoalbum generation code to the main lisp script. In the input files I just specify the file names and the captions, the script takes care of generating the html in the right order.
 ENDP
+
+BEGINP
+I will soon be starting sections where I describe seminal/important papers in computer science and I wanted those pages to be beautiful and also easy to navigate. As a result I wrote a new script to compile those files. This script uses the Lisp HTML generator as a base and builds on top of it. This script can be found at the "Lisp article page compiler" link in the right menu.
+ENDP
 FINIS
 
 NAVALPHA

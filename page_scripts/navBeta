@@ -6,3 +6,4 @@ makepage Awk Script|makepage.awk.txt
 Whats New generation Awk Script|makenew.awk.txt
 code Perl Script|code.pl.txt
 Lisp HTML Generator|pagegen.lisp.txt
+Lisp Article Page compiler|articlepage.lisp.txt

@@ -1,10 +1,14 @@
 target:page_scripts
 
-page_scripts:page_script.html code.pl.txt makepage.awk.txt makepage.pl.txt makepage.sh.txt makepage.sed.txt makenew.awk.txt pagegen.lisp.txt
+page_scripts:page_script.html code.pl.txt makepage.awk.txt makepage.pl.txt makepage.sh.txt makepage.sed.txt makenew.awk.txt pagegen.lisp.txt articlePageGen.lisp.txt
 	make glossary
 
 pagegen.lisp.txt:~/ProvingGrounds/webpage_tools/Lisp/pagegen.lisp
 	cp ~/ProvingGrounds/webpage_tools/Lisp/pagegen.lisp ../pagegen.lisp.txt
+
+articlePageGen.lisp.txt:~/ProvingGrounds/webpage_tools/Lisp/articlePageGen.lisp
+	cp ~/ProvingGrounds/webpage_tools/Lisp/articlePageGen.lisp ../articlepage.lisp.txt
+
 makenew.awk.txt:~/bin/makenew.awk
 	cp ~/bin/makenew.awk ./makenew.awk.txt
 	cp makenew.awk.txt ..
