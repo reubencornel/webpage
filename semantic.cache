@@ -1,0 +1,16 @@
+;; Object webpage/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "webpage/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags '(("target" function (:arguments ("all")) nil [1 59]) ("all" function nil nil [59 469]) ("clean" function nil nil [469 711]) ("final" function nil nil [783 810]))
+    :file "Makefile"
+    :pointmax 810
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

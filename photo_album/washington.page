@@ -1,0 +1,16 @@
+(gen-html
+ "washington.html"
+;		("washington_um2.JPG" 
+ (photo-album '(("washington_um1.JPG" "<p>This was at the university of maryland college park. Do notice the post colonial architecture of the buildings in the background. :-). Anyway for those not familiar with the guys in the photo, from the left is Tanmay, Alex and Elvis, Alex's friend nice chap perhaps because he has a pool table and lots of beer at his place.</p>")
+		("washington_capitol.JPG" "<p>The Capitol</p>")
+
+		("washington_galart.JPG" "<p>The national gallery of art.<br> This is one place where I can spend one entire week just admiring the artwork.</p>")
+		("washington_flower.JPG" "This was in the gallery of art, that place is simple plain b-e-a-utiful.")
+		("washington_me.JPG" "Me giving the tired, but brave explorer pose :D.")
+		("washington_tanmay.JPG" "This is tanmay trying hard to give the same pose that I gave some time back, but I guess it did not work out properly. Man he was really cranky on the trip, complaining about everything like the miserable cold weather to the fact that his shoe laces were undone.")
+		("washington_painting1.JPG" "A painting...cannot provide a more detailed description because I don't have one.")
+		("washington_sculpt1.JPG" "There were a whole lot of sculptures in the museum and I really liked a whole lot of them, here are a few of the ones that were photographed")
+		("washington_sculpt2.JPG" "Another sculpture")
+		("washington_sculpt3.JPG" "Yet another sculpture")) 
+	      "Washington Trip"))
+

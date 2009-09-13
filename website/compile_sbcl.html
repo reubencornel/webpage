@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+<TITLE>
+Reuben's Webpage
+</TITLE>
+<LINK rel = 'stylesheet'  href = 'sitestyle.css'  type = 'text/css' />
+</HEAD>
+<BODY>
+<DIV id = 'header' >
+<CENTER>
+<H1>
+Compiling Lisp programs using SBCL
+</H1>
+</CENTER>
+</DIV>
+<DIV class = 'content' >
+<P>
+Perhaps the most common question any newbie to lisp asks if
+there is a way to compile lisp code into an executable. The responses
+to that vary from a very vague kindoff, but why would you need such a
+thing to a go-buy-a-commercial-lisp. But before that I must inform you dear
+reader that I have tested this only on my Mac. I guess it will work on
+Linux but I have no idea if the same would work on Windows
+</P>
+<BR/>
+<P>
+The other day I happened to be looking into the 
+<A HREF = 'http://www.sbcl.org' >
+sbcl
+</A>
+<A HREF = 'http://www.sbcl.org/manual' >
+manual
+</A>
+ and I
+stumbled across an api in sb-ext called 
+<A HREF = 'http://www.sbcl.org/manual/Saving-a-Core-Image.html#Saving-a-Core-Image' >
+save-lisp-and-die
+</A>
+. This function call saves the state of environment at that point of
+   time along with all libraries to the disk. The point where this got
+   interesting was when I read that I could pass it a keyword argument that
+   could make the image executable.
+</P>
+<BR/>
+<P>
+There are a couple of things to note about this function
+   call.
+</P>
+<OL>
+<LI>
+This function all also needs an additional argument
+    called :toplevel. This argument is used to indicate the entry
+    point function for the program. Lets call this the main function.
+</LI>
+<LI>
+The main function must have an 
+<B>
+explicit call
+</B>
+
+    to  (quit).
+</LI>
+</OL>
+<BR/>
+<P>
+Once you have have a main function all you need to do is to
+   fire up sbcl. Load the project/file and then type in the following 
+<B>
+(sb-ext:save-lisp-and-die binary-name :executable t :toplevel
+   'main)
+</B>
+. This would dump out an image file which can be executed and
+   that has the name "binary-name".
+</P>
+<BR/>
+<P>
+The main drawback of this method is that the binary is HUGE. I
+   found that the binary for the very simple hello world program on my
+   computer is about 25 MB at the very least with out libraries. But
+   then I would use it anyway cause the binary is a lot faster than
+   having to wait for the interpreter to start up and then execute the
+   script and perhaps more importantly if I wanted to distribute the
+   the program I could always compile it and give it away without
+   expecting people to know how to compile and use this program.
+</P>
+</DIV>
+<DIV id = 'navAlpha' >
+<A HREF = 'whats_new.html' >
+Whats New
+</A>
+<BR/>
+<BR/>
+<A HREF = 'aboutme.html' >
+About Me
+</A>
+<BR/>
+<BR/>
+<A HREF = 'cooking.html' >
+Cooking
+</A>
+<BR/>
+<BR/>
+<A HREF = 'photoalbum.html' >
+Photos
+</A>
+<BR/>
+<BR/>
+<A HREF = 'linklist.html' >
+Link List Tutorial
+</A>
+<BR/>
+<BR/>
+<A HREF = 'trouble_shooting.html' >
+Trouble Shooting Linux
+</A>
+<BR/>
+<BR/>
+<A HREF = 'page_script.html' >
+Scripts used to Generate this Site
+</A>
+<BR/>
+<BR/>
+<A HREF = 'project.html' >
+My Projects
+</A>
+<BR/>
+<BR/>
+<A HREF = 'misc.html' >
+Miscellaneous
+</A>
+<BR/>
+<BR/>
+<A HREF = 'unix_handouts.html' >
+Unix Handouts
+</A>
+<BR/>
+<BR/>
+<A HREF = 'index.html' >
+Home Sweet Home
+</A>
+<BR/>
+<BR/>
+</DIV>
+<DIV id = 'navBeta' >
+<A HREF = 'anthem.html' >
+Indian National Anthem
+</A>
+<BR/>
+<BR/>
+<A HREF = 'k1000_rally.html' >
+My Experiences at the K 1000 Rally
+</A>
+<BR/>
+<BR/>
+<A HREF = 'seg_fault.html' >
+How to debug segmentation faults
+</A>
+<BR/>
+<BR/>
+<A HREF = 'ed_tutorial.html' >
+An ed tutorial
+</A>
+<BR/>
+<BR/>
+<A HREF = 'compile_sbcl.html' >
+Compiling Lisp programs using SBCL
+</A>
+<BR/>
+<BR/>
+</DIV>
+</BODY>
+</HTML>

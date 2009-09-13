@@ -1,0 +1,49 @@
+FILE_NAME:root_pwd.html
+TITLE:Forgot your root password
+CONTENT_START:
+BEGINP
+It is very common that some times we just don't seem to find the thing
+that we need the most, or for that matter we can't remember what we
+need. And just in case that you can't remember your root password for
+your Linux system. I think I can help you with it.
+ENDP
+BEGINP
+To start off, you need to restart you computer and get to GRUB(the
+boot loader). Once you have done this. Do as follows
+ENDP
+
+BEGINP
+<UL>
+<li>Select the line which refers to the Linux kernel and press 'e'
+<li>Then select the line which refers to the kernel of your
+system and press 'e' again.
+<li>Now you should be at a GRUB prompt. Goto the end of the line and
+type 'single'.
+<li>Then hit enter. You should be back to the previous screen. 
+<li>Goto the  first line and press 'b'.
+<li>Your Linux system will now boot. You will get a shell prompt. 
+<li>type "vi /etc/shadow".
+<li>You will get a file in which all passwords are stored. You have to
+be careful here. All File entries will be of form.<br>
+user name:encrypted password:etc....<br>
+<li>Your interest should be with the first two fields.
+<li>Search the user name field for "root"
+<li>move the cursor to the second field and clear the encrypted
+password. So that your entry looks like.<br>
+user name::etc...<br>
+<li>Save the file and quit vi.
+<li>Reboot the computer and login as root, you won't be asked for a
+password. Now you can use 'passwd' and change the root password to
+something appropriate.
+</ul>
+ENDP
+
+BEGINP
+I hope that has helped you. No, this is not a security bug as this can
+be done only on the computer when you have to be present in front of
+the computer and it has to boot up in front of you.
+ENDP
+FINIS
+
+NAVALPHA
+NAVBETA

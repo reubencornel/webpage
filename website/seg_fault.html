@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reuben's Webpage</title>
+<link rel="stylesheet" href="sitestyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="Header">
+<center>
+<h1>
+Debugging Segmentation Faults
+</h1>
+</center>
+</div>
+<div class="content">
+<h2>
+
+</h2>
+<p>
+When you are a computer science student doing a practical exam, a
+ <a href="glossary.html#segmentation fault">segmentation fault</a> can be your worst nightmare, that is if
+you don't  know how to debug it. And with the case of most VTU students the 
+previous statement holds good. This page is dedicated to giving you
+probably the most primitive method to debug segmentation faults.
+</p><br />
+<p>
+The minute you get a segmentation fault. Do as follows<br>
+1) Get to shell prompt and type <b>'ulimit -c unlimited'</b>. This command
+sets the  <a href="glossary.html#core file">core file</a> to an unlimited size. Otherwise this is
+disabled.<br><br>
+2) Compile your program with the -ggdb option. e.g<br>
+   <br>
+   cc -ggdb &lt;filename&gt; or c++ -ggdb &lt;filename&gt;
+   <br> <br>
+3) Run the program and you will get a message saying 'Segmentation
+Fault(core dumped)'. If you are using Redhat GNU/Linux or any of its
+derivatives look for a core file with the name 'core.&lt;process
+number&gt;' otherwise look for a file called 'core'.<br><br>
+4) Now type the command <b>'gdb &lt;executable name&gt; < core file name
+>'</b>. This  should start up the GNU debugger gdb. There will be a
+lot of junk on the screen when all the junk stops coming then there
+will be the gold. The offending line will be displayed. You can type
+<b>'print &lt;variable name&gt;'</b> to look at the contents of the
+variables. <br><br>
+5) Once you know the contents of the variables you should be in a
+better position to debug your program.<br><br>
+6) You can type <b>q</b> to exit the debugger.
+
+</p><br />
+
+</div>
+
+<div id="navAlpha">
+<a href="whats_new.html">Whats New</a><br /><br />
+ <a href="aboutme.html">About Me</a><br /><br />
+ <a href="cooking.html">Cooking</a><br /><br />
+ <a href="photoalbum.html">Photos</a><br /><br />
+ <a href="linklist.html">Link List Tutorial</a><br /><br />
+ <a href="trouble_shooting.html">Trouble Shooting Linux</a><br /><br />
+ <a href="page_script.html">Scripts used to Generate this Site</a><br /><br />
+ <a href="project.html">My Projects</a><br /><br />
+ <a href="misc.html">Miscellaneous</a><br /><br />
+ <a href="unix_handouts.html">Unix Handouts</a><br /><br />
+ <a href="index.html">Home Sweet Home</a><br /><br />
+ </div>
+
+</body>
+</html>

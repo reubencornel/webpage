@@ -1,0 +1,37 @@
+FILE_NAME:seg_fault.html
+TITLE:Debugging Segmentation Faults
+CONTENT_START:
+BEGINP
+When you are a computer science student doing a practical exam, a
+<GLOSSARY segmentation fault> can be your worst nightmare, that is if
+you don't  know how to debug it. And with the case of most VTU students the 
+previous statement holds good. This page is dedicated to giving you
+probably the most primitive method to debug segmentation faults.
+ENDP
+BEGINP
+The minute you get a segmentation fault. Do as follows<br>
+1) Get to shell prompt and type <b>'ulimit -c unlimited'</b>. This command
+sets the <GLOSSARY core file> to an unlimited size. Otherwise this is
+disabled.<br><br>
+2) Compile your program with the -ggdb option. e.g<br>
+   <br>
+   cc -ggdb &lt;filename&gt; or c++ -ggdb &lt;filename&gt;
+   <br> <br>
+3) Run the program and you will get a message saying 'Segmentation
+Fault(core dumped)'. If you are using Redhat GNU/Linux or any of its
+derivatives look for a core file with the name 'core.< process
+number >' otherwise look for a file called 'core'.<br><br>
+4) Now type the command <b>'gdb < executable name > < core file name
+>'</b>. This  should start up the GNU debugger gdb. There will be a
+lot of junk on the screen when all the junk stops coming then there
+will be the gold. The offending line will be displayed. You can type
+<b>'print < variable name >'</b> to look at the contents of the
+variables. <br><br>
+5) Once you know the contents of the variables you should be in a
+better position to debug your program.<br><br>
+6) You can type <b>q</b> to exit the debugger.
+
+ENDP
+FINIS
+
+NAVALPHA

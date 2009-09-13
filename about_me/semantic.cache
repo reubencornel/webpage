@@ -1,0 +1,15 @@
+;; Object about_me/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "about_me/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags '(("target" function (:arguments ("aboutme")) nil [1 17]) ("aboutme" function (:arguments ("aboutme.html")) nil [17 39]) ("aboutme.html" function (:arguments ("aboutme.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [40 219]) ("clean" function nil nil [219 240]))
+    :file "Makefile"
+    :pointmax 240
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

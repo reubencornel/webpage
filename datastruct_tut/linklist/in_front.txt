@@ -1,0 +1,153 @@
+FILE_NAME:in_front.html
+TITLE:Link list tutorial
+CONTENT_START:Adding a node to the front of the list
+BEGINP
+This is probably the first operation you have to be through with. Once
+this is understood throughly the rest would be a pushover. Take a look
+at code below this is a program that is used to add elements to the
+begining of the list. 
+CODE_START
+#include<stdio.h>
+
+//single node is going to look like this
+struct node{
+  int element;
+  struct node *next;
+};
+
+typedef struct node node;
+
+node* addToBegining(node *first,int num){
+  node *new_node=(node *)malloc(sizeof (node));
+
+  new_node->element=num;
+  new_node->next=NULL;
+
+  //if first is null make the new node the first node
+  if(first==NULL){
+    first=new_node;
+    return first;
+  }
+
+  //else add the node to the begining of the list
+  new_node->next=first;
+  first=new_node;
+
+  return first;
+}
+
+void printList(node *first){
+  node *temp=first;
+
+  //traverse the list till you manage to get the NULL
+  while(temp!=NULL){
+    printf("%d\n",temp->element);
+    temp=temp->next;
+  }
+}
+
+int main(){
+  node *first=NULL;
+  int i=0;
+  for(i=0;i<50;i++){
+    first=addToBegining(first,i);
+  }
+  printList(first);
+}
+CODE_END
+
+ENDP
+
+BEGINP
+In the program we have 2 functions apart from main.
+SEP
+<b>node* addToBegining(node *first,int num)</b> This function actually
+adds the node to the begining of the list. I won't explain the
+arguments and the return types since they should be obvious.
+SEP
+<b>void printList(node *first)</b> This function prints the contents
+of the list.
+SEP
+ENDP
+BEGINP
+This program can be downloaded from <a href="linklist1.c.txt">here</a>
+ENDP
+FINIS
+
+
+CONTENT_START: The addToBegining Function
+BEGINP
+Here I will explain how this function works. First thing in a function
+which adds anything to a link list we need to create a new node which
+will be added to the list. This is done by allocating memory using the
+malloc call.  This call allocates a block of memory for the node. This
+happens in line number 11.
+ENDP
+BEGINP
+Now that we have the block of memory we have to initialise it to the
+necessary to the data this is done in lines 13 and 14.
+ENDP
+BEGINP
+The next segment of code is interesting. Here we check to see if the
+first element of the list is NULL. If that is that case then we make
+the first point to the newly allocated node. The image below shows the
+same in a pictorial form.SEP
+<CENTER>
+<img src="linklist1.png" alt="pictorial representation">
+</CENTER>
+ENDP
+BEGINP
+If First is not NULL, then the pointer from the new node is made to
+point to the node which is pointed to by first. Once this is
+done. First is made to point to the new node and is returned as a
+result we have new element attached to the start of the list. This is
+shown pictorially below
+SEP
+<CENTER>
+<img src="linklist2.png" alt="pictorial representation">
+</center>
+ENDP
+BEGINP
+As a warning don't mix up <b>Line 23 and 24</b>. The reason is that if
+you first point the "first" pointer to the new node you will lose the
+address of the next node. Ergo, you will have nowhere to point the new
+node to.
+ENDP
+FINIS
+
+CONTENT_START:the printList() Function
+BEGINP
+This is the most standard way you would be traversing any linked
+list. So make sure you understand this well. We make a temporary
+pointer point to the first element of the list. In the while loop we
+check to see if the temporary pointer has become NULL. If it has not
+we continue. In the loop we print the number in the node. The next
+statement is again interesting. Here we actually do the
+traversing. The temporary pointer is made to point to the node pointed
+by the "next" field of the node. As a result the temporary pointer
+moves to the next node. This goes on till the "temp" pointer hits NULL.
+ENDP
+FINIS
+
+CONTENT_START:Try solving this...
+BEGINP
+Now you write a program to read in names and numbers of 5 people and
+attach  them to the front of a linklist.
+ENDP
+BEGINP
+Try your best to solve the problem above. Only as the last resort use
+this <a href="linklist_sol1.html">solution</a>. If you have a
+<GLOSSARY segmentation fault> problem you can see how to debug it <a
+href="seg_fault.html">here</a>
+ENDP
+FINIS
+NAVALPHA
+
+NAVBETA
+
+
+
+
+
+
+

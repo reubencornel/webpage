@@ -1,0 +1,26 @@
+#!/bin/bash
+cp navAlpha glossary/navBeta
+rm -f glossary/glossary
+
+for i in `ls -al | grep "^d" | tr -s ' '|cut -d ' ' -f 8 | sed 's/\.//' |sed 's/\.//'`;do
+echo "Scripting Directory: $i"
+cd $i
+cat glossary >> ../glossary/glossary
+
+./script
+cd ..
+done
+
+cd glossary
+cat glossary | awk -f ~/bin/makepage.awk > glossary.txt
+makepage.sh glossary.txt
+cp *.html ..
+cd ..
+
+mv *.html website
+mv *.gif website
+mv *.jpg website
+mv *.txt website
+mv *.png website
+cp *.css website
+

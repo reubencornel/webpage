@@ -1,0 +1,97 @@
+;; .emacs
+
+;;; uncomment this line to disable loading of "default.el" at startup
+;; (setq inhibit-default-init t)
+
+;; turn on font-lock mode
+(when (fboundp 'global-font-lock-mode)
+  (global-font-lock-mode t))
+
+(font-lock-mode)
+
+;; enable visual feedback on selections
+(setq transient-mark-mode t)
+
+;; default to better frame titles
+;(setq frame-title-format
+;      (concat  "%b - emacs@" system-name))
+
+;;set inferior lisp
+;(setq inferior-lisp-program "lisp")
+
+(auto-fill-mode t)
+
+
+(setq user-full-name "Reuben Francis Cornel")
+
+(setq font-lock-maximum-decoration t)
+
+(setq default-frame-alist
+      '((font . "-Adobe-Courier-Medium-R-Normal--14-140-75-75-M-90-ISO8859-1"))
+)
+
+
+(setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
+(display-time)
+
+
+;; go to specific line in current buffer
+(global-unset-key "\M-g")
+(global-set-key "\M-g" 'goto-line)
+
+;; Remap Home and End keys to move within current line, and C-Home and
+;; C-End keys to beginning and end of buffer
+(global-set-key [home] 'beginning-of-line)
+(global-set-key [end] 'end-of-line)
+(global-set-key [C-home] 'beginning-of-buffer)
+(global-set-key [C-end] 'end-of-buffer)
+
+;; Scroll just one line when hitting the bottom of the window
+(setq scroll-step 1)
+
+;; Maps F1 to give the manual entry for the current word
+(global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
+
+;; Make the % key jump to the matching {}[]() if on another, like VI
+(global-set-key "%" 'match-paren)
+
+(defun match-paren (arg)
+  "Go to the matching parenthesis if on parenthesis otherwise insert %."
+  (interactive "p")
+  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
+        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))
+        (t (self-insert-command (or arg 1)))))
+
+;;set diary file.
+(setq diary-file "~/.diary")
+(setq european-calender-style t)
+
+;;C indentation Offset
+(setq basic-c-offset 8)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Backups
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Tell emacs to save backups in the global backups directory...
+(defun make-backup-file-name(file)
+  (concat "~/emacs/emacsAutosave/" (file-name-nondirectory file) "~"))
+
+;switch of beeps
+(setq visible-bell t)
+
+
+;switch on bar cursor
+(bar-cursor-mode 1)
+
+(custom-set-variables
+ '(load-home-init-file t t))
+(custom-set-faces)
+
+;SLIME
+(setq inferior-lisp-program "lisp")
+;(add-to-list 'load-path "/home/project/slime")
+;(require 'slime)
+;(slime-setup)
+

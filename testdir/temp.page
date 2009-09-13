@@ -1,0 +1,9 @@
+(gen-html
+	"temp.html"
+	(page
+	 (pagetitle "temp page")
+	 (content
+	  (p 
+	   "This is supposed to be a test page"))
+	(include-navalpha)
+	 (include-navbeta)))

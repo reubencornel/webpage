@@ -1,0 +1,15 @@
+;; Object index/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "index/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags '(("target" function (:arguments ("all")) nil [1 13]) ("all" function (:arguments ("index.html")) nil [13 29]) ("index.html" function (:arguments ("index" "../navAlpha" "navBeta")) nil [30 167]) ("clean" function nil nil [167 187]))
+    :file "Makefile"
+    :pointmax 187
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

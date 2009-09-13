@@ -1,0 +1,9 @@
+(gen-html
+ "anthem.html"
+ (page
+  (pagetitle "Indian National Anthem")
+  (content
+   (p "You can find the sheet music for the Indian National Anthem " (a '((href "anthem.pdf")) "here")))
+  (include-navalpha)
+  (include-navbeta)))
+

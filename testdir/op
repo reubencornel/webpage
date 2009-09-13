@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1 September 2005), see www.w3.org" />
+<title>Reuben's Webpage</title>
+<link rel='stylesheet' href='sitestyle.css' type='text/css' />
+</head>
+<body>
+<div id='header'>
+<center>
+<h1>temp page</h1>
+</center>
+</div>
+<div class='content'>
+<p>This is supposed to be a test page</p>
+</div>
+<div id='navAlpha'><a href='aboutme.html'>About Me</a><br />
+<a href='linklist.html'>Link List Tutorial</a><br />
+<a href='trouble_shooting.html'>Trouble Shooting Linux</a><br />
+<a href='page_script.html'>Scripts used to Generate this
+Site</a><br />
+<a href='project.html'>My Projects</a><br />
+<a href='misc.html'>Miscellaneous</a><br />
+<a href='unix_handouts.html'>Unix Handouts</a><br />
+<a href='whats_new.html'>Whats New</a><br />
+<a href='index.html'>Home Sweet Home</a><br /></div>
+<div id='navBeta'><a href='project.html'>My Projects Home</a><br />
+<a href='yate.html'>Yate - Text Editor</a><br />
+<a href='sangeet.html'>Sangeet - Database Project</a><br />
+<a href='photo_angadi.html'>Photo Angadi - Graphics
+Editor</a><br />
+<a href='defending_london.html'>Defending London - Java
+Project</a><br /></div>
+</body>
+</html>

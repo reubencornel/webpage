@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reuben's Webpage</title>
+<link rel="stylesheet" href="sitestyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="Header">
+<center>
+<h1>
+Database Project
+</h1>
+</center>
+</div>
+<div class="content">
+<h2>
+Sangeet
+</h2>
+<p>
+This project is called Sangeet and was done in my 6th semester as a
+part of the database project. The main purpose of the project was to
+serve as a music store management software. It was <b>completely</b>
+implemented in Linux.
+</p><br />
+<p>
+It provided features which other projects provided apart from that it
+had a feature to rip 30 seconds of every track from a CD and make an
+entry in the database.  When a user wanted to sample a song he could
+search the database and play back the required song. The reports were
+implemented using  <a href="glossary.html#perl">perl</a>.
+</p><br />
+<p>
+I put too many details about the project as it was designed
+graphically. I can assist you by putting up some places where you can
+look for reading material. 
+</p><br />
+
+</div>
+
+<div class="content">
+<h2>
+PostgreSQL Rant
+</h2>
+<p>
+First I implemented the project using My SQL. But then at a later
+stage I found out that it did not fully support the standard SQL. That
+means no things like views, actions etc... Then I switched to
+PostgreSQL. The problem was that some SQL queries were not compatible
+so I changed them. After compiling I realised that the bloody project
+refused to connect the database. I was getting desperate. So after
+searching the net like crazy I came across a solution. And here it is.
+</p><br />
+<p>
+1) Login as root and su into the user postgres <br /><br />
+2) Create a new user account in the database using
+<b>createuser</b> <br /><br />
+3) Type <b>exit</b> at the prompt so that you are back as root. <br /><br />
+4) Edit a file in the path <b>/var/lib/postgres/data</b> called
+<b>postgresql.conf</b> <br /><br />
+5) Edit the section of the file which is <b>Connection and
+Authentication</b>. And uncomment all the lines in  this section. <br /><br />
+6) Save and exit this file. In the same path there will be another
+file called <b>pg_hba.conf</b> edit this file and make the following
+entry <br /><br />
+local  all all trust <br /><br />
+7) Save and quit the editor. <br /><br />
+8) Restart the database server.
+
+</div>
+
+</p><br />
+<div class="content">
+<h2>
+Reading Material
+</h2>
+<p>
+To start up I hope you are thorough with your DBMS basics. This is
+probably one of the most important requirements. For documentation on
+how to use the QT toolkit the best place is the on line help which is
+available with QT designer. Work out 2 or 3 examples till you manage
+to get  the hang of it.
+</p><br />
+
+</div>
+
+<div id="navAlpha">
+<a href="whats_new.html">Whats New</a><br /><br />
+ <a href="aboutme.html">About Me</a><br /><br />
+ <a href="cooking.html">Cooking</a><br /><br />
+ <a href="photoalbum.html">Photos</a><br /><br />
+ <a href="linklist.html">Link List Tutorial</a><br /><br />
+ <a href="trouble_shooting.html">Trouble Shooting Linux</a><br /><br />
+ <a href="page_script.html">Scripts used to Generate this Site</a><br /><br />
+ <a href="project.html">My Projects</a><br /><br />
+ <a href="misc.html">Miscellaneous</a><br /><br />
+ <a href="unix_handouts.html">Unix Handouts</a><br /><br />
+ <a href="index.html">Home Sweet Home</a><br /><br />
+ </div>
+<div id="navBeta">
+<a href="project.html">My Projects Home</a><br /><br />
+ <a href="yate.html">Yate - Text Editor</a><br /><br />
+ <a href="sangeet.html">Sangeet - Database Project</a><br /><br />
+ <a href="photo_angadi.html">Photo Angadi - Graphics Editor</a><br /><br />
+ <a href="defending_london.html">Defending London - Java Project</a><br /><br />
+ </div>
+
+</body>
+</html>

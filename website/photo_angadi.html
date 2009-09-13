@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reuben's Webpage</title>
+<link rel="stylesheet" href="sitestyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="Header">
+<center>
+<h1>
+Graphics Editor
+</h1>
+</center>
+</div>
+<div class="content">
+<h2>
+
+</h2>
+<p>
+This project was also done during the 6th semester as a 
+part of the curriculum. The main thing about this was that the 
+project implementation was complete in barely 3 days. Though it 
+was so fast it was comfortably one of the most stable and 
+best looking projects in the class. Some of the features of the 
+project were that the image icons were not written as code as 
+done in some editors. As as example if other people have to write a 
+button with an icon on it the icon is written as a part of 
+the code which makes moving the button to some 
+other part of the screen if necessary very difficult. This 
+project again was implemented using C++ because of the object 
+oriented features provided by the language. This is one project that 
+I can say is totally object oriented. Even the mouse pointer was an 
+object. 
+</p><br />
+<p>
+Below I will discuss some of the salient features of the project.
+</p><br />
+
+</div>
+
+<div class="content">
+<h2>
+The Button Icons
+</h2>
+<p>
+This was an interesting facet of the project by which I could create 
+most attractive buttons very easily. All I had to do was create a 
+file which had the colors of the individual pixels. This was a bit
+time consuming but I found a way to get around it.
+</p><br />
+<p>
+What I did was I wrote another program that drew the buttons as such
+then another function in the program copied down the pixel positions
+into the file as a result I got a nice icon file. The main advantage
+of this over the normal method was that I had to displace a button
+there was nothing I needed to do. I just had to pass the start point
+of the button to the button constructor with the name of the icon
+file. At the necessary place the object would draw the button. Another
+advantage of this method was that I got a very fine grained control
+over the pictures in the icons. I could manually edit the files to see
+that the icons were like how I wanted them to be. Below I have put an
+<a href="fill.ico.txt">example of a simple icon file</a>.
+</p><br />
+
+</div>
+
+<div class="content">
+<h2>
+File Saving Format
+</h2>
+<p>
+This was a bit of innovativeness from my end. If you see the editors
+of other mortals you see that the size of the graphics file is no less
+than 250KB, even if the graphic is empty. But then you have my
+editor. The size of the file varies by the frequency of the number of
+colours appearing in the file.
+</p><br />
+<p>
+I'll start by telling you how others save the graphics in their
+files. They read the pixels in one by one and write it directly this
+is no doubt simple but an unnecessary waste of disk space. What my
+file saving module does is that it reads every pixels and it checks to
+see if the colour of the current pixel is same as that as of the
+previous pixel if so then then a counter is incremented. If the colour
+is different, then the previous colour and the counter value are
+written to the file. The counter is then reset to zero. This way the
+number of writes to the file is reduced thus <b>reducing disk space
+for a file and making the program very efficient</b>
+</p><br />
+
+</div>
+
+<div class="content">
+<h2>
+Spray Paint
+</h2>
+<p>
+This is probably the stupidest thing people get foxed by. All you have
+to do is generate a random x and a random y for some given boundary
+conditions and translate the point position relative to the point
+position the mouse cursor. 
+</p><br />
+<p>
+You can try this using MS Paint. Take the spray paint tool and hold it
+down on a point for some time continuously. You will see that it
+either forms a box or a cirle. The boundary of the box or the circle
+is the boundary condition for the random point. By varying the size of
+the boundary condition you can change the size of the spray paint
+"brush". 
+</p><br />
+<p>
+Another thing is the density. This is again simple. You start up a
+small loop every time the spray paint gets control to generate the
+said number of random points. By increasing the value of the loop
+condition you can increase the density of the spray paint "brush".
+</p><br />
+
+</div>
+
+<div class="content">
+<h2>
+Reading Material
+</h2>
+<p>
+For starters you need to know the various algorithms. For this you can
+refer <b>Graphics Programming in C</b>. This book the 
+</p><br />
+
+</div>
+
+<div id="navAlpha">
+<a href="whats_new.html">Whats New</a><br /><br />
+ <a href="aboutme.html">About Me</a><br /><br />
+ <a href="cooking.html">Cooking</a><br /><br />
+ <a href="photoalbum.html">Photos</a><br /><br />
+ <a href="linklist.html">Link List Tutorial</a><br /><br />
+ <a href="trouble_shooting.html">Trouble Shooting Linux</a><br /><br />
+ <a href="page_script.html">Scripts used to Generate this Site</a><br /><br />
+ <a href="project.html">My Projects</a><br /><br />
+ <a href="misc.html">Miscellaneous</a><br /><br />
+ <a href="unix_handouts.html">Unix Handouts</a><br /><br />
+ <a href="index.html">Home Sweet Home</a><br /><br />
+ </div>
+
+<div id="navBeta">
+<a href="project.html">My Projects Home</a><br /><br />
+ <a href="yate.html">Yate - Text Editor</a><br /><br />
+ <a href="sangeet.html">Sangeet - Database Project</a><br /><br />
+ <a href="photo_angadi.html">Photo Angadi - Graphics Editor</a><br /><br />
+ <a href="defending_london.html">Defending London - Java Project</a><br /><br />
+ </div>
+
+</body>
+</html>

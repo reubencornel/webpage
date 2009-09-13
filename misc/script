@@ -1,0 +1,6 @@
+#!/bin/bash
+
+makepage.sh seg_fault.txt
+
+cp *.html ..
+rm *.html

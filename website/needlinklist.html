@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reuben's Webpage</title>
+<link rel="stylesheet" href="sitestyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="Header">
+<center>
+<h1>
+Why do we need link lists
+</h1>
+</center>
+</div>
+<div class="content">
+<h2>
+
+</h2>
+<p>
+First we need to see why are link lists needed in the first place. We
+could comfortably use arrays and get on with life. But the problem
+with arrays is that it allocates memory statically. As a result when
+we require to use programs where we don't know that amount of data
+that is going to be input we can not use arrays. As an example take a
+look at the program below.  You can copy and paste the program below
+in an editor and compile it, and run it.
+</p><br />
+
+<p>
+<div id="navCode">
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#include&lt;stdio.h&gt;<br />
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int main(){
+<br />
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /*variable declaration*/
+<br />
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int i=0;
+<br />
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int list[5];
+<br />
+5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int entry_number=0;
+<br />
+6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  int limit=50;
+<br />
+7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<br />
+8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /*fill up list up to the brim*/
+<br />
+9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for(i=0;i&lt;limit;i++){<br />
+10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list[i]=entry_number;
+<br />
+11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   entry_number++;
+<br />
+12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />
+13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br />
+14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /*try printing the list*/
+<br />
+15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  for(i=0;i&lt;limit;i++){<br />
+16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    printf("%d\n",list[i]);
+<br />
+17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  }	
+<br />
+18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />
+</div></p><br />
+
+<p>
+If you are using gnu/Linux you will see that after displaying 50 numbers
+the program puts out a  <a href="glossary.html#segmentation fault">segmentation fault</a> message. This message occurs
+when ever a program tries to use a part of the memory that has not
+been allocated to it. As in this case we fill up 50 values in an array
+of size 10 and try accessing the part we have not allocated. Although this may work, as in not give a segmentation fault, its behaviour would be unpredictable. Its probably not a good idea to use it because the unallocated memory could be written over with out warning and the program could behave unexpectedly.
+</p><br />
+
+<p>     
+This program should work for small values of i like 6 to 10 without
+getting a seg fault. I feel that when the OS allocates
+memory  for the array it gives it approximately one page there is
+always a little extra memory that the program can use. I'm not very
+sure about that reason if someone can clarify it I will make the necessary changes.
+</p><br />
+
+<p>
+As we can see from above we can see that it is not possible to use
+array for programs where we have variable memory requirements.
+</p><br />
+
+<p>
+This program can be downloaded from <a href="array.c.txt">here</a>.
+</p><br />
+
+</div>
+
+<div id="navAlpha">
+<a href="whats_new.html">Whats New</a><br /><br />
+ <a href="aboutme.html">About Me</a><br /><br />
+ <a href="cooking.html">Cooking</a><br /><br />
+ <a href="photoalbum.html">Photos</a><br /><br />
+ <a href="linklist.html">Link List Tutorial</a><br /><br />
+ <a href="trouble_shooting.html">Trouble Shooting Linux</a><br /><br />
+ <a href="page_script.html">Scripts used to Generate this Site</a><br /><br />
+ <a href="project.html">My Projects</a><br /><br />
+ <a href="misc.html">Miscellaneous</a><br /><br />
+ <a href="unix_handouts.html">Unix Handouts</a><br /><br />
+ <a href="index.html">Home Sweet Home</a><br /><br />
+ </div>
+<div id="navBeta">
+<a href="linklist.html">Link List Tutorial Home</a><br /><br />
+ <a href="needlinklist.html">Why do we need Link lists??</a><br /><br />
+ <a href="enter_linklist.html">Enter The Link List</a><br /><br />
+ <a href="in_front.html">Insert Elements in the Front of a List</a><br /><br />
+ <a href="at_end.html">Insert Elements at the End of the List</a><br /><br />
+ <a href="in_middle.html">Insert Elements in the Middle of the List</a><br /><br />
+ </div>
+
+</body>
+</html>

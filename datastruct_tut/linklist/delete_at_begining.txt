@@ -1,0 +1,13 @@
+FILE_NAME:delete_at_begining.html
+TITLE:Delete Node At Start
+CONTENT_START:
+BEGINP
+We have seen all possible methods by which we could add elements to a
+linked list. Now is the turn of removing stuff from the list. Let us
+start with the easiest, that being deleting elements from the
+beginning of the list. We will use the program which was previously
+written to generate a list.
+ENDP
+FINIS
+NAVALPHA
+NAVBETA

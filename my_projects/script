@@ -1,0 +1,12 @@
+#!/bin/bash
+makepage.sh project.txt
+makepage.sh yate.txt
+makepage.sh sangeet.txt
+makepage.sh photo_angadi.txt
+makepage.sh defending_london.txt
+
+cp *.html ..
+cp fill.ico ../fill.ico.txt
+rm *.html
+
+

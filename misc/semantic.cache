@@ -1,0 +1,16 @@
+;; Object misc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "misc/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags '(("target" function (:arguments ("misc")) nil [1 14]) ("misc" function (:arguments ("seg_fault.html" "k1000_rally.html" "misc.html")) nil [14 77]) ("glossary" function (:arguments ("../glossary/glossary")) nil [77 146]) ("misc.html" function (:arguments ("misc.txt" "../navAlpha")) nil [146 219]) ("seg_fault.html" function (:arguments ("seg_fault.txt" "../navAlpha")) nil [219 311]) ("k1000_rally.html" function (:arguments ("k1000_rally.txt" "../navAlpha")) nil [311 411]) ("clean" function nil nil [411 430]))
+    :file "Makefile"
+    :pointmax 430
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

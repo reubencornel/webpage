@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Reuben's Webpage</title>
+<link rel="stylesheet" href="sitestyle.css" type="text/css" />
+</head>
+<body>
+
+<div id="Header">
+<center>
+<h1>
+Installing Linux on a HP Pavilion
+</h1>
+</center>
+</div>
+<div class="content">
+<h2>
+ 
+</h2>
+
+<p>
+You got a new HP Pavilion with lots of snazzy features, but you have a
+little problem you just cannot install Linux without making use of
+those precious rescue CD's provided by HP. The results of this are not
+very nice. Your carefully crafted partitions are flushed away by the
+'format' commode. Leaving you with only two partition one having
+Windows and another having rescue data.
+</p><br />
+
+<p>
+If what I have described above is the problem then you have come to
+the right place. 
+</p><br />
+
+<p>
+To start up I suggest you run the rescue discs once
+more and set the system to its orignal setting.
+</p><br />
+
+<p>
+Get a copy of partition magic and install it on windows and format the
+partition having the rescue data. Then from the Main windows partition
+create two partitions 
+</p><br />
+
+<ul>
+<li>1) for Linux create this partition after taking into consideration the
+   size of the swap partition.
+<li>2) create another partition of size say 20-30 or what ever is the
+   minimum recommeded by partition magic.
+</ul>
+<br>
+
+<p>
+Get a copy of XOSL(This is a bloody brillant piece of software). Get a
+fresh floppy make sure its bootable. Unzip XOSL and copy it onto the
+floppy.
+</p><br />
+
+<p>
+Boot from the floppy and start XOSL(I think you have to type setup or
+something like that otherwise do a 'dir' and look for a '.exe' file and
+type its name) 
+</p><br />
+
+<p>
+This should start up the XOSL setup. Once you have managed
+this.Some where along the line the program will ask you if you want to
+install XOSL on a dedicated partion of its own or on the MBR select
+the choice with the option of installing on the dedicated
+partition. Then somewhere along the line it will show you what it
+would install. In the list you should find an option to install
+'Ranish partition manager' deselect this option. And let the setup
+continue. Reboot the system after the install.
+</p><br />
+
+<p>
+You should get the new XOSL startup screen. Here click the "setup"
+button and add a Windows entry to the list of options and select the
+windows bootable partion. 
+</p><br />
+
+<p>
+When you install make sure that you install the bootloader on the
+first sector of the boot partition. When you reboot add another entry
+for linux. 
+</p><br />
+
+</div>
+
+<div id="navAlpha">
+<a href="whats_new.html">Whats New</a><br /><br />
+ <a href="aboutme.html">About Me</a><br /><br />
+ <a href="cooking.html">Cooking</a><br /><br />
+ <a href="photoalbum.html">Photos</a><br /><br />
+ <a href="linklist.html">Link List Tutorial</a><br /><br />
+ <a href="trouble_shooting.html">Trouble Shooting Linux</a><br /><br />
+ <a href="page_script.html">Scripts used to Generate this Site</a><br /><br />
+ <a href="project.html">My Projects</a><br /><br />
+ <a href="misc.html">Miscellaneous</a><br /><br />
+ <a href="unix_handouts.html">Unix Handouts</a><br /><br />
+ <a href="index.html">Home Sweet Home</a><br /><br />
+ </div>
+
+<div id="navBeta">
+<a href="trouble_shooting.html">Linux Trouble Shooting</a><br /><br />
+ <a href="grub.html">Installed Windows Over GRUB</a><br /><br />
+ <a href="xwin.html">Screwed X Windows</a><br /><br />
+ <a href="hp_pav.html">Installing Linux on an HP Pavilion</a><br /><br />
+ <a href="root_pwd.html">Forgot Your Root Password??</a><br /><br />
+ </div>
+
+</body>
+</html>

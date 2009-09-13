@@ -1,0 +1,8 @@
+(gen-html 
+ "easter.html"
+ (photo-album '(("easter08_ReshmiK.JPG" "Reshmi Kababs")
+		("easter08_cook1.JPG" "Skewing up!!!")
+		("easter08_cook2.JPG" "Chef Reuben")
+		("easter08_murghhar.JPG" "Murg haryali")
+		("easter08_ssn.JPG" "SSN!!!"))
+	      "Easter"))

@@ -1,0 +1,8 @@
+(gen-html
+ "photoalbum.html"
+ (page
+  (pagetitle "Photos!")
+  (content 
+   (p "I will use this section of the site to post up my photos. I want to improve the user interface for my photo gallery, if you do think of anything please let me know. Cheers!"))
+  (include-navalpha)
+  (include-navbeta)))

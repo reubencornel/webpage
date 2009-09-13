@@ -1,0 +1,15 @@
+#!/bin/bash
+
+makepage.sh page_script.txt
+cp *.html ..
+cp ~/bin/makepage.sh ./makepage.sh.txt
+cp ~/bin/makepage.awk ./makepage.awk.txt
+cp ~/bin/makepage.sed ./makepage.sed.txt
+cp ~/bin/makepage.pl ./makepage.pl.txt
+cp ~/bin/code.pl ./code.pl.txt
+
+
+
+cp *.txt ..
+rm *.html
+
