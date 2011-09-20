@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>A practical approach to programming with assertions - David Rosenblum</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2010-01-24 08:52:34 EST"/>
+<meta name="author" content="Reuben Francis Cornel"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="orgstyle.css" />
+<link rel="stylesheet" type="text/css" href="orgstyle.css" />
+<script type="text/javascript" src="'org-info.js'"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "toc");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">A practical approach to programming with assertions - David Rosenblum</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 A practical approach to programming with assertions - David Rosenblum</a>
+<ul>
+<li><a href="#sec-1.1">1.1 General notes on Assertions </a></li>
+<li><a href="#sec-1.2">1.2 Classification of assertions </a>
+<ul>
+<li><a href="#sec-1.2.1">1.2.1 Specification of function interfaces. </a></li>
+<li><a href="#sec-1.2.2">1.2.2 Specification of function bodies </a></li>
+</ul>
+</li>
+<li><a href="#sec-1.3">1.3 Description of usage on a system called Yeast </a></li>
+<li><a href="#sec-1.4">1.4 Conclusion </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> A practical approach to programming with assertions - David Rosenblum &nbsp;&nbsp;&nbsp;<span class="tag"><span class="SOFTWARE_ENGINEERING">SOFTWARE_ENGINEERING</span>&nbsp;<span class="ASSERTIONS">ASSERTIONS</span></span></h2>
+<div class="outline-text-2" id="text-1">
+
+<p>This is a paper that describes a system developed by the author
+that helps them specify assertions. They also provide a
+classification of the types of assertions that they used in the
+code. 
+</p>
+<p>
+As a side note I must say that though instructive about the type of
+assertions, I find it disappointing  the authors leave out details about assertions from a
+program verification perspective.
+</p>
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><span class="section-number-3">1.1</span> General notes on Assertions </h3>
+<div class="outline-text-3" id="text-1.1">
+
+<ul>
+<li>
+Assertions describe what a system is supposed to do rather than how
+</li>
+<li>
+Assertions find use is run time in
+<ul>
+<li>
+Testing
+</li>
+<li>
+Debugging 
+</li>
+<li>
+Maintainance
+</li>
+</ul>
+</li>
+<li>
+Viewed as a permanent part of programming defensively.
+</li>
+<li>
+Assertions state the properties of the function to any one who reads the code.
+</li>
+<li>
+The reasons why assertions had not seen large scale use is because
+<ul>
+<li>
+It did not seem to usable to the average developer
+<ul>
+<li>
+The tools did not integrate
+<ul>
+<li>
+Did not provide the ability to customize both the types of assertions and the behaviours
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+Lack of studies related to what types of checks that can be done with assertions.
+</li>
+</ul>
+</li>
+<li>
+Interesting side note
+<b>Most software faults are interface faults.</b>
+<ul>
+<li>
+That implies that designing the types of any system is particularly important.
+</li>
+</ul>
+</li>
+<li>
+Assertions should avoid having side effects
+<ul>
+<li>
+Reason being assertions should simply check the computation rather than be an active part of it.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2"><span class="section-number-3">1.2</span> Classification of assertions </h3>
+<div class="outline-text-3" id="text-1.2">
+
+
+</div>
+
+<div id="outline-container-1.2.1" class="outline-4">
+<h4 id="sec-1.2.1"><span class="section-number-4">1.2.1</span> Specification of function interfaces. </h4>
+<div class="outline-text-4" id="text-1.2.1">
+
+<p>They describe function behaviour at a level of abstraction as seen by the callers
+</p>
+</div>
+
+<div id="outline-container-1.2.1.1" class="outline-5">
+<h5 id="sec-1.2.1.1"><span class="section-number-5">1.2.1.1</span> Consistency between arguments </h5>
+<div class="outline-text-5" id="text-1.2.1.1">
+
+<p>Assertions that are used to describe the constraints between
+arguments of a functions. As a result, we can use them to
+validate values of parameters passed into the function.
+</p>
+<p>
+For example the paper describes a function that stores a sequence
+of tokens, the assertion there describes the relation between the
+type of token and the value of the actual token.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.1.2" class="outline-5">
+<h5 id="sec-1.2.1.2"><span class="section-number-5">1.2.1.2</span> Dependency of return value on arguments </h5>
+<div class="outline-text-5" id="text-1.2.1.2">
+
+<p>It describes the type of relationship between the input
+parameters and the return value of the function.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.1.3" class="outline-5">
+<h5 id="sec-1.2.1.3"><span class="section-number-5">1.2.1.3</span> Effect on global state </h5>
+<div class="outline-text-5" id="text-1.2.1.3">
+
+<p>Used to describe the effect of a function on variables that store
+global state. For example, they describe the state of the
+variable once the function execution is almost complete.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.1.4" class="outline-5">
+<h5 id="sec-1.2.1.4"><span class="section-number-5">1.2.1.4</span> Context within which a function is called </h5>
+<div class="outline-text-5" id="text-1.2.1.4">
+
+<p>Used to describe the state of the system when the function is called.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.1.5" class="outline-5">
+<h5 id="sec-1.2.1.5"><span class="section-number-5">1.2.1.5</span> Frame specifications </h5>
+<div class="outline-text-5" id="text-1.2.1.5">
+
+<p>Used to specify that a function does not manipulate the global
+state or the contents of a variable passed in through a
+reference.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.1.6" class="outline-5">
+<h5 id="sec-1.2.1.6"><span class="section-number-5">1.2.1.6</span> Sub range membership of data </h5>
+<div class="outline-text-5" id="text-1.2.1.6">
+
+<p>Validate if a sub range of data passed into a function meets the
+required criteria.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.1.7" class="outline-5">
+<h5 id="sec-1.2.1.7"><span class="section-number-5">1.2.1.7</span> Non Null Pointer Checks </h5>
+<div class="outline-text-5" id="text-1.2.1.7">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.2.2" class="outline-4">
+<h4 id="sec-1.2.2"><span class="section-number-4">1.2.2</span> Specification of function bodies </h4>
+<div class="outline-text-4" id="text-1.2.2">
+
+
+</div>
+
+<div id="outline-container-1.2.2.1" class="outline-5">
+<h5 id="sec-1.2.2.1"><span class="section-number-5">1.2.2.1</span> Condition of the else part of "complex" if statements </h5>
+<div class="outline-text-5" id="text-1.2.2.1">
+
+<p>Make sure that we have reasonable values getting into the else
+parts of an if ladder
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.2.2" class="outline-5">
+<h5 id="sec-1.2.2.2"><span class="section-number-5">1.2.2.2</span> Conditions on the default cases of switch statements </h5>
+<div class="outline-text-5" id="text-1.2.2.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.2.2.3" class="outline-5">
+<h5 id="sec-1.2.2.3"><span class="section-number-5">1.2.2.3</span> Consistency between related data </h5>
+<div class="outline-text-5" id="text-1.2.2.3">
+
+<p>Specify constraints between mutually dependent data at frequent
+intervals within the code that manipulates that data.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2.2.4" class="outline-5">
+<h5 id="sec-1.2.2.4"><span class="section-number-5">1.2.2.4</span> Intermediate snap shot of computation </h5>
+<div class="outline-text-5" id="text-1.2.2.4">
+
+<p>Specify at frequent intervals the key constraints that a function
+body must satisfy.
+</p></div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3"><span class="section-number-3">1.3</span> Description of usage on a system called Yeast </h3>
+<div class="outline-text-3" id="text-1.3">
+
+<p>This section describes the usage of the APP program with respect to
+the development of a program called YEAST.
+</p>
+<p>
+I'm not summarizing this section cause I'm not interested in it.
+</p></div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4"><span class="section-number-3">1.4</span> Conclusion </h3>
+<div class="outline-text-3" id="text-1.4">
+
+<p>The mechanism for assertions mentioned here has a number of
+interesting things to note
+</p><ul>
+<li>
+The assertions are mentioned as comments and are inserted into
+the code using a preprocessor. The advantage of doing this is
+that we can have separate copies of the binary built with out
+assertions.
+</li>
+<li>
+Assertions have a severity level assigned to assertion failures
+</li>
+<li>
+A flexible way of dealing with assertion failures, which could be
+based on the severity level. This to a large extent kind of
+reminds me of using some sort of exeception handling capability,
+but I have not thought about it too much.
+
+</li>
+</ul>
+
+<p>The paper does address the fact that it does not cover assertions
+from the point of view of verification, with no valid
+reason. 
+</p></div>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Reuben Francis Cornel
+<a href="mailto:reuben@nom19545a.nomadic.ncsu.edu">&lt;reuben@nom19545a.nomadic.ncsu.edu&gt;</a>
+</p>
+<p class="date"> Date: 2010-01-24 08:52:34 EST</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>

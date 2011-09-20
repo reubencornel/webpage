@@ -24,6 +24,9 @@ all:
 	-cp *.css website
 	-mv *.jpg website
 	-mv *.pdf website
+	-mv *.tar.gz website
+#	#-cd website && tidyDirectory.sh
+
 #clean up the mess left by the make process
 clean:
 	-rm *.html

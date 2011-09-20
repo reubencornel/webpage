@@ -1,3 +1,4 @@
+
 target:all
 
 all:index.html

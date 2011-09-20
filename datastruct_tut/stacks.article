@@ -1,0 +1,84 @@
+* Stacks
+
+** Description
+
+Stacks are a dynamic data structure that operate using the LIFO
+principle. More explicitly LIFO stands for "last in first out", which
+in stack language translates as when someone calls a DELETE operation
+on a stack the element that was most recently inserted gets deleted.
+
+The insert on a stack is termed Push and the delete operation is
+termed Pop. As an analogy consider piling books such that they are one
+on top of each other, so when you do a push on this stack you place a
+book on top the pile and pray that it does not topple over. When you
+do a Pop the topmost book of the pile is removed.
+
+A stack has an attribute called <i>top</i> that points to the topmost
+element of the stack. When <i>top</i> is zero then the stack is
+empty. 
+
+There are two main error conditions to be concerned about when dealing
+with stacks 
+
+<ul>
+  <li><b>Underflow:</b> This happens when you try to pop an element of
+  the stack when the stack is empty</li>
+<li><b>Overflow:</b> This happens when you push an element on to a
+  already full stack</li>
+</ul>
+
+The pseudo code below is sourced from <i>Introduction to Algorithm</i> by Cormen, Leiserson, Rivest and Stein.
+
+CODE_START
+Stack-empty(s) {
+   if s.top == 0 {
+     return true;
+   } else {
+     return false;
+}
+CODE_END
+
+<p></p>
+
+CODE_START
+Push(S,x){
+	// You can put an overflow check here
+	s.top = s.top + 1;
+	S[s.top] = x
+}
+CODE_END
+
+<p></p>
+
+CODE_START
+Pop(S) {
+       if Stack-empty(S) {
+       error "Underflow"
+       }else {		
+       s.top = s.top - 1;
+       return s[s.top + 1]
+}      	      
+CODE_END
+
+<p></p>
+
+** Uses
+
+Stacks find uses in a number of places, the most obvious place that
+comes to mind is the program stack. That is when a program is being
+executed and a function is called, the current state of execution is
+saved in the program stack and new element that represents the call to
+the called function is placed on the stack. When that function returns
+that record is popped of the stack.
+
+You can use stack as a data structure when you are doing a Depth First
+Search. They are also used in implementing a reverse polish notation
+calculator a good implementation of this can be found "The C
+Programming Language" by Kernighan and Ritchie.
+
+** Problems you can think about
+
+Write a function that takes in a set of integers and returns an
+integer with the lowest value in O(1). 
+
+Also take a look at exercise 10.1-2 from the Cormen textbook.

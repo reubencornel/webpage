@@ -1,0 +1,29 @@
+* Defintions of Asymtotic notations
+
+** Introduction
+
+This page is meant to serve as a reminder of the definitions of asymtotic notations.
+
+<ul>
+<li> &Theta; - notation: &Theta;(g(n)) = {f(n) : there exists positive
+constants <i>c<sub>1</sub>, c<sub>2</sub> and n<sub>0</sub></i> such that
+<i>0 &le; c<sub>1</sub>g(n) &le; f(n) &le; c<sub>2</sub>g(n) </i>for all <i>n &ge;
+n<sub>0</sub></i>}.
+
+<li> O - notation: O(g(n)) = {f(n) : there exists positive constants
+<i>c</i> and <i>n<sub>0</sub></i> such that <i>0 &le; f(n) &le;
+cg(n)</i> for all <i>n &ge n<sub>0</sub></i>}
+
+<li> &Omega; - notation: &Omega;(g(n)) = {f(n) : there exists positive constants
+<i>c</i> and <i>n<sub>0</sub></i> such that <i>0 &le; cg(n) &le; f(n)
+</i> for all <i>n &ge; n<sub>0</sub></i>}
+
+<li> o - notation: o(g(n)) = {f(n) : there exists positive constants
+<i>c</i> and <i>n<sub>0</sub></i> such that <i>0 &le; f(n) &lt;
+cg(n)</i> for all <i>n &ge n<sub>0</sub></i>}
+
+<li> &omega; - notation: &omega;(g(n)) = {f(n) : there exists positive constants
+<i>c</i> and <i>n<sub>0</sub></i> such that <i>0 &le; cg(n) &lt; f(n)
+</i> for all <i>n &ge; n<sub>0</sub></i>}
+
+</ul>

@@ -1,6 +1,6 @@
 target:misc
 
-misc:seg_fault.html k1000_rally.html misc.html ed_tutorial.html anthem.html sbcl_compile.html
+misc:seg_fault.html k1000_rally.html misc1.html ed_tutorial.html anthem.html sbcl_compile.html complexdefn.html
 	menuconvert navbeta navBeta
 	make glossary
 	-cp *.html ..
@@ -26,12 +26,15 @@ ed_tutorial.html: ed.page
 	mv op ed_tutorial.html  
 	cp ed_tutorial.html ..
 
+complexdefn.html: complexdefn.article
+	articleGen complexdefn.article
+
 glossary:../glossary/glossary
 	cat glossary >> ../glossary/glossary
 
-misc.html:misc.txt ../navAlpha
+misc1.html:misc.txt ../navAlpha
 	-makepage.sh misc.txt
-	cp misc.html ..	
+	cp misc1.html ..	
 
 seg_fault.html:seg_fault.txt ../navAlpha
 	-makepage.sh seg_fault.txt

@@ -1,4 +1,4 @@
-FILE_NAME:misc.html
+FILE_NAME:misc1.html
 TITLE:Miscellenous Writings
 CONTENT_START: Just a collection of incoherent ramblings...
 BEGINP

@@ -1,0 +1,231 @@
+/*This design was orginally culled of the site www.bluerobot.com . That site has
+ * an 3 simple layouts for sites this is taken from the third
+ *layout. I've modified it a bit to suit my requirements
+ *
+ *Reuben Cornel
+ */
+
+body {
+    /*        color:#333;*/
+    color: black;
+    background-color:white;
+    margin:20px;
+    padding:0px;
+    font: 12pt georgia, serif; /*14pt verdana, arial, helvetica, sans-serif;*/
+    line-height: 1.5em;
+}
+h1 {
+    margin:0px 0px 15px 0px;
+    padding:0px;
+    font-size:20pt;
+    font-weight:900;
+/*        color:#ccc;*/
+}
+h2 {
+    font:bold 14pt georgia, serif; /*verdana, arial, helvetica, sans-serif;*/
+    margin:0px 0px 5px 0px;
+    padding:0px;
+}
+p {
+    /*        font:12pt helvetica;/* verdana, arial, helvetica, sans-serif;*/
+    margin:0px 0px 16px 0px;
+    padding:0px;
+    
+}
+/*.Content>p {margin:0px;}*/
+/*.Content>p+p {text-indent:30px;}*/
+
+a {
+    
+    /*        color:#09c;*/
+    color: #0817FF;
+    /*        font-size:10pt;
+              font-family:verdana, arial, helvetica, sans-serif;
+              font-weight:600;*/
+    text-decoration:none;
+}
+
+a:link {
+    color: #0817FF;
+}
+
+a.title{
+	color: black;
+}
+
+a.title:hover{
+	background-color: white;
+}
+
+a:visited {color:#3E0046;}
+/*a:hover {background-color:#eee;}*/
+a:hover {background-color:#b8b8bc;}  
+
+/* All the content boxes belong to the content class. */
+.content {
+    position:relative; /* Position is declared "relative" to gain control of
+			  stacking order (z-index). */
+    width:auto;
+    min-width:120px;
+    margin:0px 210px 20px 170px;
+    border:1px solid black;
+    background-color:white;
+    padding:10px;
+    text-align:justify;
+    z-index:3; /* This allows the content to overlap the right menu in
+		  narrow windows in good browsers. */
+}
+
+
+#navAlpha {
+
+    position:absolute;
+    /*  width:150px;*/
+    /*        font-size: 14pt;*/
+    font-size: 12pt;
+    width: auto;
+    text-align:center;
+    top:130px;
+    left:20px;
+    
+    border:1px dashed black;
+    background-color:#eee;
+    padding:10px;
+    z-index:2;
+    voice-family: "\"}\"";
+    voice-family:inherit;
+}
+body>#navAlpha {width:128px;
+               /*width:auto;*/}
+
+#navBeta {
+    position:absolute;
+    /*        font-size: 14pt;*/
+    font-size:12pt;
+    /*        width:190px;*/
+    width:auto;
+    top:130px;
+    
+    right:20px;
+    border:1px dashed black;
+    background-color:#eee;
+    padding:10px;
+    z-index:1;
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    width:168px;
+}
+body>#navBeta {width:150px;
+              /*width:auto;*/}
+
+
+
+#navCode {
+    position:relative;
+    font-size: 12pt;
+    /*        width:190px;*/
+    width:auto;
+    border:1px dashed black;
+    background-color:#eee;
+    padding:10px;
+
+    z-index:1;
+    voice-family: "\"}\"";
+    voice-family:inherit;
+/*        width:00px;*/
+}
+
+
+
+
+#Header {
+    margin:50px 0px 10px 0px;
+    padding:17px 0px 20px 20px;
+           /* For IE5/Win's benefit height = [correct height] + [top padding] +
+	      [top and bottom border widths] */
+    height:33px; /* 14px + 17px + 2px = 33px */
+    border-style:solid;
+    border-color:black;
+    border-width:1px 0px; /* top and bottom borders: 1px; left and right
+			     borders: 0px */
+    line-height:11px;
+    background-color:#eee;
+
+    voice-family: "\"}\"";
+    voice-family:inherit;
+    height:14px; /* the correct height */
+}
+
+
+a.info{
+    position:relative; /*this is the key*/
+    z-index:24; background-color:#ccc;
+    color:#000;
+    text-decoration:none;
+}
+
+a.info:hover{z-index:25; background-color:#ff0}
+
+a.info span{display: none;}
+
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    top:2em; left:2em; width:15em;
+    border:1px solid #0cf;
+    background-color:#ffe; color:#000;
+    text-align: center;
+}
+
+
+/*This wrapper is required so that I get the necessary width*/
+#TOCWrapper {
+    float:right;
+    font-size: 12pt;
+    font-family: Georgia;
+    width: 20em;
+    text-align: left;
+    padding-left: 20px;
+    z-index:2;
+    float:right;
+}
+
+#tableofcontents{
+    font-size: 12pt;
+    font-family: Georgia;
+    width: 19em;
+    text-align: left;
+    border: 1px dashed black;
+    background-color:#eee;
+    padding:10px;
+    z-index:2;
+    float:right;
+    
+    line-height: 1.5em;
+}
+
+
+.TOCHeader{
+    font-family: Georgia;
+    font-size:14pt;  
+    margin-left: 1em;
+}
+
+.TOCContents{
+    font-family: Georgia;
+    font-size:14pt;
+}
+
+.TOCTitle{
+    font-family: Georgia;
+    font-size:12pt;
+    margin-left: 1em;
+}
+
+.TOCSubtitle{
+    margin-left: 3em;
+    font-size: 10pt;
+}
+
+
+body>#Header {height:14px;}

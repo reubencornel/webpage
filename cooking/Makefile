@@ -1,6 +1,6 @@
 target:cooking
 
-cooking: cooking.html murghhar.html buffalo.html rasam.html
+cooking: cooking.html murghhar.html buffalo.html rasam.html peprrasam.html Murgh2Piaza.html
 	-cp *.html ..
 	make glossary
 
@@ -16,6 +16,12 @@ murghhar.html: murghhar.page
 
 buffalo.html: buffalo.page
 	pagegen buffalo.page
+
+peprrasam.html: peprrasam.article
+	articleGen peprrasam.article
+
+Murgh2Piaza.html: Murgh2Piaza.article
+	articleGen Murgh2Piaza.article
 
 glossary: ../glossary/glossary
 	-cat glossary >> ../glossary/glossary

@@ -1,7 +1,7 @@
 target:all
 
 all:glossary
-	cat glossary | gawk -f ~/bin/makepage.awk  > glossary.txt
+	cat glossary | awk -f ~/bin/makepage.awk  > glossary.txt
 	-makepage.sh glossary.txt
 	-cat glossary.html | tidy -o glo1.html
 	-cp glo1.html glossary.html

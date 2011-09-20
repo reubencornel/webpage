@@ -1,7 +1,7 @@
 (gen-html
  "compile_sbcl.html"
  (page
-  (pagetitle "Compiling Lisp programs using SBCL")
+  (pagetitle "Generating an executable Lisp program using SBCL")
   (content
    (p "Perhaps the most common question any newbie to lisp asks if
 there is a way to compile lisp code into an executable. The responses
@@ -10,7 +10,6 @@ thing to a go-buy-a-commercial-lisp. But before that I must inform you dear
 reader that I have tested this only on my Mac. I guess it will work on
 Linux but I have no idea if the same would work on Windows")
 
-   (br)
    (p "The other day I happened to be looking into the " 
       (reference "http://www.sbcl.org" "sbcl")
       (reference "http://www.sbcl.org/manual" "manual" )" and I
@@ -20,7 +19,6 @@ stumbled across an api in sb-ext called " (reference "http://www.sbcl.org/manual
    interesting was when I read that I could pass it a keyword argument that
    could make the image executable.")
 
-   (br)
    (p "There are a couple of things to note about this function
    call.") 
    
@@ -31,14 +29,12 @@ stumbled across an api in sb-ext called " (reference "http://www.sbcl.org/manual
     (list-item "The main function must have an " (b "explicit call") "
     to  (quit).")) 
    
-   (br)
    (p "Once you have have a main function all you need to do is to
    fire up sbcl. Load the project/file and then type in the following "
    (b "(sb-ext:save-lisp-and-die binary-name :executable t :toplevel
    'main)") ". This would dump out an image file which can be executed and
    that has the name \"binary-name\".")
    
-   (br)
    (p "The main drawback of this method is that the binary is HUGE. I
    found that the binary for the very simple hello world program on my
    computer is about 25 MB at the very least with out libraries. But
@@ -48,7 +44,14 @@ stumbled across an api in sb-ext called " (reference "http://www.sbcl.org/manual
    the program I could always compile it and give it away without
    expecting people to know how to compile and use this program.")
 
-   )
+   (p (b "Later Edit:") "Its been a while since I have been using
+   lisp. From what I have figured the above function dumps a copy of
+   the memory of the lisp interpreter and all libraries loaded at that
+   point of time, hence the large binary")
+
+   (p "Further more you might want to check out Zach Beane's "
+     (reference "http://xach.com/lisp/buildapp/" "buildapp.") 
+   ))
   (include-navalpha)
   (include-navbeta)
   ))

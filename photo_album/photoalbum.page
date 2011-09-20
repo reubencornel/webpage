@@ -3,6 +3,8 @@
  (page
   (pagetitle "Photos!")
   (content 
-   (p "I will use this section of the site to post up my photos. I want to improve the user interface for my photo gallery, if you do think of anything please let me know. Cheers!"))
+   (p "<del>I will use this section of the site to post up my photos. I want to improve the user interface for my photo gallery, if you do think of anything please let me know. Cheers!</del>.")
+   (p "I am interested in photograhy. You can find my photographs in the slideshow below.")
+   (center (p "<iframe align=\"center\" src=\"http://www.flickr.com/slideShow/index.gne?user_id=27604793@N00&\" frameBorder=\"0\" width=\"500\" scrolling=\"no\" height=\"500\"></iframe>")))
   (include-navalpha)
   (include-navbeta)))

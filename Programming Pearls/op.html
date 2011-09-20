@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<TITLE>
+Reuben's Webpage
+</TITLE>
+<LINK rel = 'stylesheet'  href = 'sitestyle.css'  type = 'text/css' />
+</HEAD>
+<BODY>
+<DIV id = 'header' >
+<CENTER>
+<H1>
+Stacks 
+</H1>
+</CENTER>
+</DIV>
+<DIV class = 'content' >
+<DIV ID = 'TOCwrapper' >
+<DIV ID = 'tableofcontents' >
+<DIV CLASS = 'TOCHeader' >
+Table Of Contents
+<HR/>
+</DIV>
+<DIV CLASS = 'TOCContents' >
+<DIV CLASS = 'TOCTitle' >
+<A HREF = '#title1' >
+1.  Description Stacks are a dynamic data structure that operate using the LIFO principle. More explicitly LIFO stands for "last in first out", which in stack language translates as when someone calls a DELETE operation on a stack the element that was most recently inserted gets deleted. 
+</A>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<H1>
+<A NAME = 'title1'  CLASS = 'title' >
+ Description Stacks are a dynamic data structure that operate using the LIFO principle. More explicitly LIFO stands for "last in first out", which in stack language translates as when someone calls a DELETE operation on a stack the element that was most recently inserted gets deleted. 
+</A>
+</H1>
+<P>
+The insert on a stack is termed Push and the delete operation is termed Pop. As an analogy consider piling books such that they are one on top of each other, so when you do a push on this stack you place a book on top the pile and pray that it does not topple over. When you do a Pop the topmost book of the pile is removed. 
+</P>
+<P>
+A stack has an attribute called <i>top</i> that points to the topmost element of the stack. When <i>top</i> is zero then the stack is empty.  
+</P>
+<P>
+There are two main error conditions to be concerned about when dealing with stacks  
+</P>
+<P>
+<ul>   <li><b>Underflow:</b> This happens when you try to pop an element of   the stack when the stack is empty</li> <li><b>Overflow:</b> This happens when you push an element on to a   already full stack</li> </ul> 
+</P>
+<P>
+The code to implement the stack is given below, its quite self explanatory and you can find an implementation of the same in ruby here 
+</P>
+<P>
+<div id="navCode"> 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stack-empty(s) { <br /> 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   if s.top == 0 { <br /> 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     return true; <br /> 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   } else { <br /> 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     return false; <br /> 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br /> </div> ** Uses 
+</P>
+</DIV>
+<DIV id = 'navAlpha' >
+<A HREF = 'whats_new.html' >
+Whats New
+</A>
+<BR/>
+<BR/>
+<A HREF = 'aboutme.html' >
+About Me
+</A>
+<BR/>
+<BR/>
+<A HREF = 'cooking.html' >
+Cooking
+</A>
+<BR/>
+<BR/>
+<A HREF = 'photoalbum.html' >
+Photos
+</A>
+<BR/>
+<BR/>
+<A HREF = 'linklist.html' >
+Link List Tutorial
+</A>
+<BR/>
+<BR/>
+<A HREF = 'trouble_shooting.html' >
+Trouble Shooting Linux
+</A>
+<BR/>
+<BR/>
+<A HREF = 'page_script.html' >
+Scripts used to Generate this Site
+</A>
+<BR/>
+<BR/>
+<A HREF = 'project.html' >
+My Projects
+</A>
+<BR/>
+<BR/>
+<A HREF = 'misc.html' >
+Miscellaneous
+</A>
+<BR/>
+<BR/>
+<A HREF = 'unix_handouts.html' >
+Unix Handouts
+</A>
+<BR/>
+<BR/>
+<A HREF = 'index.html' >
+Home Sweet Home
+</A>
+<BR/>
+<BR/>
+</DIV>
+<DIV id = 'navBeta' >
+<A HREF = 'crackingTheOyster.html' >
+Cracking the Oyster
+</A>
+<BR/>
+<BR/>
+</DIV>
+</BODY>
+</HTML>

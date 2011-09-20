@@ -65,10 +65,10 @@ a:hover {background-color:#b8b8bc;}
 .content {
     position:relative; /* Position is declared "relative" to gain control of
 			  stacking order (z-index). */
-    width:auto;
+/*    width: auto;*/
+    width: 35%;
     min-width:120px;
-    margin:0px 210px 20px 170px;
-    border:1px solid black;
+    margin:0px 40% 20px 30%;
     background-color:white;
     padding:10px;
     text-align:justify;
@@ -87,8 +87,7 @@ a:hover {background-color:#b8b8bc;}
     text-align:center;
     top:130px;
     left:20px;
-    
-    border:1px dashed black;
+    border: dashed 1px;
     background-color:#eee;
     padding:10px;
     z-index:2;
@@ -103,11 +102,12 @@ body>#navAlpha {width:128px;
     /*        font-size: 14pt;*/
     font-size:12pt;
     /*        width:190px;*/
+    border: dashed 1px;
     width:auto;
     top:130px;
     
     right:20px;
-    border:1px dashed black;
+
     background-color:#eee;
     padding:10px;
     z-index:1;
@@ -139,23 +139,25 @@ body>#navBeta {width:150px;
 
 
 #Header {
-    margin:50px 0px 10px 0px;
+    margin:50px 40% 10px 30%;
     padding:17px 0px 20px 20px;
+    width: 35%;
+    alignment: center;
            /* For IE5/Win's benefit height = [correct height] + [top padding] +
 	      [top and bottom border widths] */
-    height:33px; /* 14px + 17px + 2px = 33px */
+    height: auto;  /*33px;*/ /* 14px + 17px + 2px = 33px */
+
     border-style:solid;
     border-color:black;
-    border-width:1px 0px; /* top and bottom borders: 1px; left and right
+    border-width:1px 0px;  /* top and bottom borders: 1px; left and right
 			     borders: 0px */
     line-height:11px;
-    background-color:#eee;
+  /*  background-color:#eee; */
 
     voice-family: "\"}\"";
     voice-family:inherit;
     height:14px; /* the correct height */
 }
-
 
 a.info{
     position:relative; /*this is the key*/

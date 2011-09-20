@@ -19,34 +19,26 @@ FILE_NAME:index.html
 <h2>About this Site</h2>
 <p>You have reached the part of the net which belongs to <b>Reuben
 Francis Cornel</b>. This is <a href="mypic.jpg">what I look like</a> if you are interested.</p>
-</div>
-<div class="content">
+
 <h2>Organization of web pages</h2>
 <p>This site is essentially meant to initiate people into
 programming. As of now it does not have anything very deep about
 the subjects mentioned. But in the future I intend to go deeper
 into the subjects.</p>
-<br />
+
 <p>Most of the tutorial pages are organized as follows. It first
 gives a brief introduction to the subject, then it says how to get
 started with it. Once you know the basic and are interested in
 going deeper then you can follow the links mentioned in the
 resources section of the tutorial</p>
-</div>
 
-<div class="content">
-<h2>Contact Me</h2>
-<p> Please feel free to contact me for clarifications. I may not be
-able to reply to every mail I receive. I will try my best to reply to
-most of them</p>
-<p>My email address is <a
-href="mailto:reuben_cornel@yahoo.com">reuben_cornel@yahoo.com</a>
-reuben (underscore) cornel (at) yahoo (dot) com. And yes please put
-the subject as <b>"website"</b> otherwise the mail will be consigned to the
-eternal fires of the great yahoo trash can.</p>
-</div>
+<h2>Contact Me</h2> 
 
-<div class="content">
+<p> Please feel free to contact me for
+clarifications. I may not be able to reply to every mail I receive. I
+will try my best to reply to most of them. My email address is reuben
+(dot) cornel (at) the google mail service.</p>
+
 <p>
 This page is still under development. I try and write whenever I have
 the time. Sorry if you hit something that is not complete I will try

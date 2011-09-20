@@ -1,0 +1,225 @@
+menuconvert navalpha navAlpha
+rm glossary/glossary
+touch glossary/glossary
+rm website/*
+cd cooking && make
+menuconvert navbeta navBeta
+pagegen cooking.page
+pagegen murghhar.page
+pagegen buffalo.page
+pagegen rasam.page
+articleGen peprrasam.article
+cp *.html ..
+make glossary
+cat glossary >> ../glossary/glossary
+cat: glossary: No such file or directory
+make[2]: [glossary] Error 1 (ignored)
+cd photo_album && make
+make[1]: Circular photoalbum.html <- photoalbum.html dependency dropped.
+menuconvert navbeta navBeta
+pagegen photoalbum.page
+make[1]: Circular easter.html <- easter.html dependency dropped.
+pagegen easter.page
+make[1]: Circular washington.html <- washington.html dependency dropped.
+pagegen washington.page
+cp *.html ..
+cp *.jpg ..
+cp: *.jpg: No such file or directory
+make[1]: [photoalbum] Error 1 (ignored)
+cp *.JPG ..
+make glossary
+cat glossary >> ../glossary/glossary
+cat: glossary: No such file or directory
+make[2]: [glossary] Error 1 (ignored)
+cd my_projects && make
+makepage.sh defending_london.txt
+cp defending_london.html ..
+makepage.sh photo_angadi.txt
+cp photo_angadi.html ..
+makepage.sh sangeet.txt
+cp sangeet.html ..
+makepage.sh project.txt
+cp project.html ..
+makepage.sh yate.txt
+cp yate.html ..
+make glossary
+cat glossary >>../glossary/glossary
+cd datastruct_tut && make
+pagegen datastructure.page
+code.pl <stacks.article >op.article
+cp stacks.article stacks_backup.article
+mv op.article stacks.article
+articleGen stacks.article
+cp stacks_backup.article stacks.article
+rm stacks_backup.article
+code.pl <bst.article >op.article
+cp bst.article bst_backup.article
+mv op.article bst.article
+articleGen bst.article
+cp bst_backup.article bst.article
+rm bst_backup.article
+code.pl <disjointsets.article >op.article
+cp disjointsets.article disjointsets_backup.article
+mv op.article disjointsets.article
+articleGen disjointsets.article
+cp disjointsets_backup.article disjointsets.article
+rm disjointsets_backup.article
+cd linklist && make
+cp linklist31.png ..
+cp linklist32.png ..
+cp linklist33.png ..
+makepage.sh at_end.txt
+cp at_end.html ..
+makepage.sh in_front.txt
+cp linklist1.png ..
+cp linklist2.png ..
+cp in_front.html ..
+makepage.sh linklist_sol1.txt
+cp linklist_sol1.html ..
+makepage.sh linklist_sol2.txt
+cp linklist_sol2.html ..
+makepage.sh needlinklist.txt
+cp needlinklist.html ..
+makepage.sh enter_linklist.txt
+cp enter_linklist.html ..
+makepage.sh linklist.txt
+cp linklist.html ..
+cp array.c array.c.txt
+cp array.c.txt ..
+cp linklist1.c linklist1.c.txt
+cp linklist1.c.txt ..
+cp linklist2.c linklist2.c.txt
+cp linklist2.c.txt ..
+cp linklist3.c linklist3.c.txt
+cp linklist3.c.txt ..
+makepage.sh in_middle.txt
+cp linklist41.png ..
+cp linklist42.png ..
+cp linklist43.png ..
+cp in_middle.html ..
+cp linklist4.c linklist4.c.txt
+cp linklist4.c.txt ..
+make glossary
+cat glossary >>/Users/reuben/webpage/glossary/glossary
+mv *.html ..
+mv *.png ..
+mv *.txt ..
+cd page_scripts && make
+makepage.sh page_script
+cp page_script.html ..
+cp ~/bin/code.pl ./code.pl.txt
+cp code.pl.txt ..
+cp ~/bin/makepage.awk ./makepage.awk.txt
+cp makepage.awk.txt ..
+cp ~/bin/makepage.pl ./makepage.pl.txt
+cp makepage.pl.txt ..
+cp ~/bin/makepage.sh ./makepage.sh.txt
+cp makepage.sh.txt ..
+cp ~/bin/makepage.sed ./makepage.sed.txt
+cp makepage.sed.txt ..
+cp ~/bin/makenew.awk ./makenew.awk.txt
+cp makenew.awk.txt ..
+cp ~/ProvingGrounds/webpage_tools/Lisp/pagegen.lisp ../pagegen.lisp.txt
+cp ~/ProvingGrounds/webpage_tools/Lisp/articlePageGen.lisp ../articlepage.lisp.txt
+make glossary
+cat glossary >>../glossary/glossary
+cd linux_trouble && make
+makepage.sh grub.txt
+cp grub.html ..
+makepage.sh hp_pav.txt
+cp hp_pav.html ..
+makepage.sh linux_trouble.txt
+cp trouble_shooting.html ..
+makepage.sh root_pwd.txt
+cp root_pwd.html ..
+makepage.sh xwin.txt
+cp xwin.html ..
+make glossary
+cat glossary >> ../glossary/glossary
+cd misc && make
+makepage.sh seg_fault.txt
+cp seg_fault.html ..
+makepage.sh k1000_rally.txt
+cp k1000_rally.html ..
+makepage.sh misc.txt
+cp misc.html ..	
+#sbcl --load ~/bin/menuconvert.fasl navbeta navBeta
+menuconvert navbeta navBeta
+pagegen ed.page
+#sbcl --load ~/bin/pagegen.fasl ed.page
+cat ed_tutorial.html | code-lisp.pl > op
+mv op ed_tutorial.html  
+cp ed_tutorial.html ..
+#sbcl --load ~/bin/menuconvert.fasl navbeta navBeta
+menuconvert navbeta navBeta
+pagegen indian_anthem.page
+#-sbcl --load ~/bin/pagegen.fasl indian_anthem.page
+cp anthem.html ..
+cp *.pdf ..
+pagegen compile_sbcl.page
+articleGen complexdefn.article
+menuconvert navbeta navBeta
+make glossary
+cat glossary >> ../glossary/glossary
+cp *.html ..
+cd glossary && make
+cat glossary | gawk -f ~/bin/makepage.awk  > glossary.txt
+gawk: /Users/reuben/bin/makepage.awk:11: warning: escape sequence `\/' treated as plain `/'
+makepage.sh glossary.txt
+cat glossary.html | tidy -o glo1.html
+line 30 column 1 - Warning: <a> attribute "name" has invalid value " segmentation fault"
+line 40 column 1 - Warning: <a> attribute "name" has invalid value " AWK"
+line 50 column 1 - Warning: <a> attribute "name" has invalid value " sed"
+line 60 column 1 - Warning: <a> attribute "name" has invalid value " perl"
+line 71 column 1 - Warning: <a> attribute "name" has invalid value " GRUB"
+line 80 column 1 - Warning: <a> attribute "name" has invalid value " core file"
+line 90 column 1 - Warning: <a> attribute "name" lacks value
+line 18 column 1 - Warning: trimming empty <h2>
+line 93 column 1 - Warning: trimming empty <b>
+line 92 column 1 - Warning: trimming empty <p>
+line 30 column 1 - Warning: <a> cannot copy name attribute to id
+line 40 column 1 - Warning: <a> cannot copy name attribute to id
+line 50 column 1 - Warning: <a> cannot copy name attribute to id
+line 60 column 1 - Warning: <a> cannot copy name attribute to id
+line 71 column 1 - Warning: <a> cannot copy name attribute to id
+line 80 column 1 - Warning: <a> cannot copy name attribute to id
+line 90 column 1 - Warning: <a> cannot copy name attribute to id
+Info: Doctype given is "-//W3C//DTD XHTML 1.0 Transitional//EN"
+Info: Document content looks like XHTML 1.0 Transitional
+17 warnings, 0 errors were found!
+
+
+To learn more about HTML Tidy see http://tidy.sourceforge.net
+Please send bug reports to html-tidy@w3.org
+HTML and CSS specifications are available from http://www.w3.org/
+Lobby your company to join W3C, see http://www.w3.org/Consortium
+make[1]: [all] Error 1 (ignored)
+cp glo1.html glossary.html
+rm glo1.html
+cp glossary.html ..
+cd index && make
+makepage.sh index
+cp designemacs.jpg ..
+cp *.png ..
+cp *.jpg ..
+cp index.html ..
+cp sitestyle.css ..
+cd whats_new && make
+cp *.html ..
+cd about_me && make
+makepage.sh aboutme.txt
+cp house.jpg ..
+cp resume.pdf ..
+cp aboutme.html ..
+cp ~/emacs/dotEmacs.el ../my_emacs_init.txt
+cd unix_handouts && make
+makepage.sh unix_handouts.txt
+cp unix_handouts.html ..
+cp *.pdf ..
+mv *.html website
+mv *.png  website
+mv *.txt website
+mv *.JPG website
+cp *.css website
+mv *.jpg website
+mv *.pdf website

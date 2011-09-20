@@ -43,15 +43,23 @@ certificate that said nice things about me. But
 then one fine day inspiration to do my masters hit me and right now
 I'm at the Computer science department of North Carolina State
 University doing my masters in Computer Science. I'm really interested
-in Artificial Intelligence and more specifically, machine learning.  
+in Artificial Intelligence. 
 ENDP
-BEGINP
 
- I love
-programming, making circuits, long distance cycling, <a
-href="http:/www.fsf.org">free software</a>, Linux. I'm proud to say 
-that I'm a member of the church choir. I <b>hate</b> lazy people,
-hypocrites, and politicians of all sizes and shapes.
+BEGINP
+I also interned at <a href="http://www.verisign.com">Verisign Inc</a>
+over the summer of 2008 and again since I did a good job my very nice
+manager told me that I could work for them over Fall too I agreed
+cause I had tonnes of fun working there. I really enjoyed my work at
+Verisign, met some really nice people, learnt quite a lot and most
+importantly I visited almost all the Smithsonian Museums.
+ENDP
+
+BEGINP
+ I love programming, making circuits, long distance cycling, <a
+ href="http:/www.fsf.org">free software</a>, Linux. I'm proud to say
+ that I'm a member of the church choir. I <b>hate</b> lazy people,
+ hypocrites, and politicians of all sizes and shapes.  
 ENDP
 
 BEGINP
@@ -63,7 +71,7 @@ ENDP
 BEGINP
 I swear by the emacs text editor, because of its extreme versatility
 and programability. Configuring emacs is an art in its self. I have
-put up me <a href="my_emacs_init.txt">.emacs file</a> on this site. It was
+put up my <a href="https://github.com/reubencornel/emacs-config">insanely large emacs config</a> on this site. It was
 originally culled of another site. I have made some additions to the
 file which you probably might not have on your computer. This may
 cause a bit of trouble when starting the editor. Commenting the
@@ -71,7 +79,7 @@ appropriate lines will prevail over all evil.
 ENDP
 
 BEGINP
-I'm currently working on the cogworks project that contributes towards the requirements for my thesis. This project touches on aspects of cognitive modelling, software engineering, computer supported collaborative work and knowledge representation. My advisor is <a href="http://www4.ncsu.edu/~stamant/">Robert St. Amant</a>.
+I'm currently working on the cogworks project that contributes towards the requirements for my thesis. This project touches on aspects of cognitive modelling, software engineering, computer supported collaborative work and knowledge representation. My advisor is <a href="http://www4.ncsu.edu/~stamant/">Robert St. Amant</a>. We published a <a href="RC-RSA-JS.pdf">paper based on the work</a> I had done, it won the best paper award at the Brims 2010 conference at Charleston, SC.
 ENDP
 FINIS
 

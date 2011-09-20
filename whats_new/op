@@ -3,7 +3,56 @@ TITLE:Whats new on the site
 CONTENT_START:New stuff...
 SEP
 BEGINP
-<b>[12 September 2009,08:56:08 PM EDT]</b>
+<b>[04 May 2011,06:30:38 AM PDT]</b>
+SEP
+Updated the photo album section to display a slide show from my <a href="http://www.flickr.com/photos/screamingmonkey">flickr account</a>.
+
+
+
+ENDP
+BEGINP
+<b>
+[04 May 2011,06:15:19 AM PDT]</b>
+SEP
+Updated the about me page to include the Brims 2010 paper. Also updated the broken miscellaneous page link.
+
+
+
+ENDP
+BEGINP
+<b>
+[22 December 2009,09:35:23 PM EST]</b>
+SEPI have added a curious new section to this site. It is my brain dump exported from my org mode files. You can get a glimpse of stuff I read by looking at it <a href="org-index.html">here</a>
+
+
+ENDP
+BEGINP
+<b>
+[25 November 2009,02:03:38 PM EST]</b>
+SEP
+Added a recipe for Murgh Do Piaza <a href="Murgh2Piaza.html">here</a>.
+
+ENDP
+BEGINP
+<b>
+[23 September 2009,07:17:01 PM EDT]</b>
+SEPAdded pepper rasam recipe <a href="peprrasam.html">here</a>
+
+
+ENDP
+BEGINP
+<b>
+[13 September 2009,07:06:06 PM EDT]</b>
+SEP
+Added a new script that compiles articles in to a nice format. Details and the source can be found on the "Scripts used to generate the pages
+" <a href="page_script.html">page</a>.
+
+ 
+
+ENDP
+BEGINP
+<b>
+[12 September 2009,08:56:08 PM EDT]</b>
 SEPAs you can see I am beginning to change the typography on the website so as to make it more readable. I have changed the font to georgia that should be available on almost all computers. I have also changed the color of the font to black for higher contrast with the background. I have also set the line spacing to 1.5 em so as to give more space between lines. More changes coming soon!!!
 
 

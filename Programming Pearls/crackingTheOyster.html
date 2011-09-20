@@ -1,0 +1,172 @@
+<HTML>
+<HEAD>
+<TITLE>
+Reuben's Webpage
+</TITLE>
+<LINK rel = 'stylesheet'  href = 'sitestyle.css'  type = 'text/css' />
+</HEAD>
+<BODY>
+<DIV id = 'header' >
+<CENTER>
+<H1>
+Cracking the Oyster 
+</H1>
+</CENTER>
+</DIV>
+<DIV class = 'content' >
+<DIV ID = 'TOCwrapper' >
+<DIV ID = 'tableofcontents' >
+<DIV CLASS = 'TOCHeader' >
+Table Of Contents
+<HR/>
+</DIV>
+<DIV CLASS = 'TOCContents' >
+<DIV CLASS = 'TOCTitle' >
+<A HREF = '#title1' >
+1.  Introduction 
+</A>
+</DIV>
+<DIV CLASS = 'TOCTitle' >
+<A HREF = '#title2' >
+2.  The mysterious sort function 
+</A>
+</DIV>
+<DIV CLASS = 'TOCTitle' >
+<A HREF = '#title3' >
+3.  Program Design 
+</A>
+</DIV>
+<DIV CLASS = 'TOCTitle' >
+<A HREF = '#title4' >
+4.  Principles 
+</A>
+</DIV>
+</DIV>
+</DIV>
+</DIV>
+<H1>
+<A NAME = 'title1'  CLASS = 'title' >
+ Introduction 
+</A>
+</H1>
+<P>
+This chapter tries to draw our attention to necessity of acquiring and understanding the need for us to gain comprehensive information about the problem domain and how that knowledge can lead us towards developing elegant solutions. In other words he is talking about how  
+</P>
+<H1>
+<A NAME = 'title2'  CLASS = 'title' >
+ The mysterious sort function 
+</A>
+</H1>
+<P>
+Bentley starts up by describing a problem where a programmer told him that he wanted to write a sort for a disk file. But then in the illustration Bentley provides a solution immediately, in the form of a disk based merge sort. This response does not enthuse the programmer. Bentley goes back and questions him about the need for the sort function, the inputs, the outputs and the constraints that are to be placed on that function.  
+</P>
+<P>
+Based on the programmers description he summarizes the requirements. I liked the very objective manner in which this problem was discussed and the requirements explained. I have listed the requirements belows 
+</P>
+<P>
+<i>Input:</i> The file contains n positive integers where n = 10<sup>7</sup>. It is an error if any integer occurs twice in the  input, ergo all integers in the input are unique. No other data is associated with the integer. 
+</P>
+<P>
+<i>Output:</i> The input integers sorted in ascending order. 
+</P>
+<P>
+<i>Constraints:</i> Roughly about a megabyte of storage in main  memory and very short run time. 
+</P>
+<P>
+Things I would like to make a note of from here is that when talking about an input to a function define the characteristics of the data that is the type, conditions that invalidate the data, constraints on the data and other contextual information. 
+</P>
+<P>
+Constraints could mainly be space and time but in other cases we might also have to consider robustness, reliability and ability to handle failure. 
+</P>
+<H1>
+<A NAME = 'title3'  CLASS = 'title' >
+ Program Design 
+</A>
+</H1>
+<P>
+Bentley discusses a number of approaches to the problem. The first one being a on disk based merge sort, the pros of using this approach is that its quick. But then it might take a few days to code it up.  
+</P>
+<P>
+The second approach is a multiple pass sort algorithm, he discusses that a file and be read in multiple times in chunks sorted in memory and then later be merged back. The major drawback of this is that it requires as many as forty passes for the specification he has mentioned. He then comes to the point that the best approach to this problem would be one where there the input is read once, sorted in memory and the output is written to the file once.  
+</P>
+<P>
+Based on this and the general characteristics of the data he arrives at uses a bitmap or a bit vector representation. The whole idea is that the individual bits in the memory could be used to represent individual phone numbers. In effect he is doing a sort of counting sort. 
+</P>
+<H1>
+<A NAME = 'title4'  CLASS = 'title' >
+ Principles 
+</A>
+</H1>
+<P>
+I'll use this section to list out ideas that I learned from this article 
+</P>
+<P>
+<ul> 	<li> Careful analysis of a problem can help identify elegant 	solutions. 	<li> Define the problem as unambiguously as possible 	<li> In most cases reducing space requirements reduces runtime 	<li> Design simple solutions. </ul> 
+</P>
+</DIV>
+<DIV id = 'navAlpha' >
+<A HREF = 'whats_new.html' >
+Whats New
+</A>
+<BR/>
+<BR/>
+<A HREF = 'aboutme.html' >
+About Me
+</A>
+<BR/>
+<BR/>
+<A HREF = 'cooking.html' >
+Cooking
+</A>
+<BR/>
+<BR/>
+<A HREF = 'photoalbum.html' >
+Photos
+</A>
+<BR/>
+<BR/>
+<A HREF = 'linklist.html' >
+Link List Tutorial
+</A>
+<BR/>
+<BR/>
+<A HREF = 'trouble_shooting.html' >
+Trouble Shooting Linux
+</A>
+<BR/>
+<BR/>
+<A HREF = 'page_script.html' >
+Scripts used to Generate this Site
+</A>
+<BR/>
+<BR/>
+<A HREF = 'project.html' >
+My Projects
+</A>
+<BR/>
+<BR/>
+<A HREF = 'misc.html' >
+Miscellaneous
+</A>
+<BR/>
+<BR/>
+<A HREF = 'unix_handouts.html' >
+Unix Handouts
+</A>
+<BR/>
+<BR/>
+<A HREF = 'index.html' >
+Home Sweet Home
+</A>
+<BR/>
+<BR/>
+</DIV>
+<DIV id = 'navBeta' >
+<A HREF = 'crackingTheOyster.html' >
+Cracking the Oyster
+</A>
+<BR/>
+<BR/>
+</DIV>
+</BODY>
+</HTML>
