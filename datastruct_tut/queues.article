@@ -1,0 +1,40 @@
+* Queues
+
+** Definition
+
+A queue is a first-in first-out data structure. So that really means
+is that the data structure maintains the ordering in which elements
+are put in, well atleast the basic queue does so. Its consists of two
+pointers: head that points to the front of the queue; and tail, that
+points to the end of the queue
+
+A queue exposes a couple of apis: enqueue and dequeue. Which as the
+names say insert elements to the tail of the queue and remove elements
+from the head of the queue.
+
+Queues come in a number of flavours, the most rudimentary being the
+basic queue, that just dequeues elements as enqueued. The slightly
+more complicated priority queue, that dequeues elements based on the
+priority of the key of the element in the queue, to the amazing queues
+that handle messaging and provide transaction and time guarantees in a
+large system.
+
+Queues play pretty crucial roles in number algorithms such as
+Dijkstra's algorithm, or the breadth first search. But they are also
+used in enterprise computing to batch out computation jobs, help
+isolate components of a large system.
+
+** Implementation
+
+Basic queues can be implemented using linked lists or arrays. Queues
+implemented as linked lists are simple. You maintain two pointers, one
+to the head and another to the tail of the list. When you enqueue an
+element you add it to the end of the list and make that the new
+tail. When you dequeue an element, you move the head pointer forward
+by one node and free the previous node.
+
+The implementation that I will be providing is the implementation
+using arrays. Firstly because I have some pretty embarassing memories
+trying to write this program up. It can be
+found <a href="queues.c">here </a>
+

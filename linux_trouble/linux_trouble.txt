@@ -1,6 +1,6 @@
 FILE_NAME:trouble_shooting.html
 TITLE:Trouble Shooting Linux
-CONTENT_START:Tackling the little linux beast
+CONTENT_START:Dealing with linux problems
 BEGINP
 This page is dedicated to trouble shooting Linux problems. Mainly due
 to public demand.

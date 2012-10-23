@@ -1,0 +1,69 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
+
+#define QUEUE_SIZE 10
+#define EMPTY_QUEUE -110218
+
+typedef struct queue{
+        int *queue;
+        int head;
+        int tail;
+} queue;
+
+void initialize_queue(queue *q){
+        q = (queue *)malloc(sizeof(struct queue));
+        q->queue = (int *)malloc(sizeof(int) * QUEUE_SIZE);
+        q->head = q->tail = 0;
+}
+
+void enqueue(queue *q, int element){
+        if (q->head == (q->tail + 1) % QUEUE_SIZE){
+                printf("Queue full\n");
+                return;
+        }
+
+        q->queue[q->tail] = element;
+        (q->tail)++;
+}
+
+
+int dequeue(queue *q){ 
+        if (q->head == q->tail){
+                printf("Queue empty\n");
+                return EMPTY_QUEUE;
+        }
+
+        int element = q->queue[q->head];
+        (q->head)++;
+        return element;
+}
+
+
+void print_queue(queue *q){
+        int i = q->head;
+
+        if (q->head == q->tail){
+                printf("Queue empty\n");
+                return;
+        }
+
+        while(i != q->tail){
+                printf("%d ", q->queue[i]);
+                i = (i + 1) % QUEUE_SIZE;
+        }
+        printf("\n");
+}
+
+void free_queue(queue *q){
+        free(q->queue);
+        free(q);
+}
+
+
+int main(){
+        queue *q;
+        initialize_queue(q);
+        enqueue(q, 10);
+        print_queue(q);
+}

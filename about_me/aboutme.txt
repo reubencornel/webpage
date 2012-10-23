@@ -81,6 +81,11 @@ ENDP
 BEGINP
 I'm currently working on the cogworks project that contributes towards the requirements for my thesis. This project touches on aspects of cognitive modelling, software engineering, computer supported collaborative work and knowledge representation. My advisor is <a href="http://www4.ncsu.edu/~stamant/">Robert St. Amant</a>. We published a <a href="RC-RSA-JS.pdf">paper based on the work</a> I had done, it won the best paper award at the Brims 2010 conference at Charleston, SC.
 ENDP
+
+BEGINP
+I have since moved on from being a poor student. I now work for Salesforce.com. I also dabble with photography, apprently some editor at National geographic thought that a photo of mine was worth being the editors favourite a the national geographic photo contest 2011.
+ENDP
+
 FINIS
 
 NAVALPHA
