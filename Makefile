@@ -49,3 +49,8 @@ clean:
 final:
 	whats_new
 	make all
+
+deploy:
+	tar -czf website.tar.gz	 website
+	scp website.tar.gz rfcornel@tty.freeshell.org:
+	expect /Users/reuben/bin/deploy.expect
