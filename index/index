@@ -12,7 +12,7 @@ FILE_NAME:index.html
 <!-- <h1>Welcome to Reuben's real estate on the net</h1> -->
 <div id="Header">
 <center>
-<h1>Welcome to Reuben's real estate on the Net</h1>
+<h1>Reuben's Web page</h1>
 </center>
 </div>
 <div class="content">
@@ -32,7 +32,7 @@ started with it. Once you know the basic and are interested in
 going deeper then you can follow the links mentioned in the
 resources section of the tutorial</p>
 
-<h2>Contact Me</h2> 
+<h2>Contact Me</h2>
 
 <p> Please feel free to contact me for
 clarifications. I may not be able to reply to every mail I receive. I

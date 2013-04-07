@@ -34,6 +34,7 @@ clean:
 	-rm *.png
 	-rm *.pdf
 	-rm *.menu
+	-rm *.tar.gz
 	cd cooking && make clean
 	cd photo_album && make clean
 	cd my_projects && make clean
@@ -52,5 +53,5 @@ final:
 
 deploy:
 	tar -czf website.tar.gz	 website
-	scp website.tar.gz rfcornel@tty.freeshell.org:
+	scp website.tar.gz $(WEBSITE_USER):
 	expect /Users/reuben/bin/deploy.expect
