@@ -11,7 +11,7 @@ body {
     background-color:white;
     margin:20px;
     padding:0px;
-    font: 12pt georgia, serif; /*14pt verdana, arial, helvetica, sans-serif;*/
+    font: 12pt arial, sans-serif, serif; /*14pt verdana, arial, helvetica, sans-serif;*/
     line-height: 1.5em;
 }
 h1 {
@@ -22,7 +22,7 @@ h1 {
 /*        color:#ccc;*/
 }
 h2 {
-    font:bold 14pt georgia, serif; /*verdana, arial, helvetica, sans-serif;*/
+    font:bold 14pt arial, serif; /*verdana, arial, helvetica, sans-serif;*/
     margin:0px 0px 5px 0px;
     padding:0px;
 }
@@ -37,11 +37,10 @@ p {
 
 a {
     
-    /*        color:#09c;*/
-    color: #0817FF;
-    /*        font-size:10pt;
-              font-family:verdana, arial, helvetica, sans-serif;
-              font-weight:600;*/
+    color: #0817FF; 
+/*    font-size:10pt; */
+    font-family:arial, verdana, helvetica, sans-serif;
+    font-weight:600; 
     text-decoration:none;
 }
 
