@@ -1,12 +1,15 @@
 #website = ~/webpage
 target: linklist_tutorial
 
-linklist_tutorial: at_end.html in_front.html linklist_sol1.html linklist_sol2.html needlinklist.html enter_linklist.html linklist.html array.c.txt linklist1.c.txt linklist2.c.txt linklist3.c.txt in_middle.html linklist4.c.txt 
+linklist_tutorial: navbeta.menu at_end.html in_front.html linklist_sol1.html linklist_sol2.html needlinklist.html enter_linklist.html linklist.html array.c.txt linklist1.c.txt linklist2.c.txt linklist3.c.txt in_middle.html linklist4.c.txt 
 	make glossary
 
-#delete_at_begining.html: delete_at_begining.txt navBeta $(WEBSITE)/navAlpha
-#	makepage delete_at_begining.txt
+#delete_at_begining.html: delete_at_begining.article navBeta $(WEBSITE)/navAlpha
+#	articleGen delete_at_begining.article
 #	cp delete_at_begining.html ..
+
+navbeta.menu: navBeta
+	menuconvert navbeta navBeta
 
 linklist4.c.txt:linklist4.c
 	cp linklist4.c linklist4.c.txt
@@ -34,45 +37,46 @@ linklist3.c.txt:linklist3.c
 glossary:$(WEBSITE)/glossary/glossary
 	cat glossary >>$(WEBSITE)/glossary/glossary
 
-linklist.html:linklist.txt navBeta $(WEBSITE)/navAlpha
-	-makepage.sh linklist.txt
+linklist.html:linklist.article navBeta $(WEBSITE)/navAlpha
+	articleGen linklist.article
 	cp linklist.html ..
 
-at_end.html:at_end.txt navBeta $(WEBSITE)/navAlpha
+at_end.html:at_end.article navBeta $(WEBSITE)/navAlpha
 	cp linklist31.png ..
 	cp linklist32.png ..
 	cp linklist33.png ..
-	-makepage.sh at_end.txt
+	articleGen at_end.article
 	cp at_end.html ..
 
-in_front.html:in_front.txt navBeta $(WEBSITE)/navAlpha
-	-makepage.sh in_front.txt
+in_front.html:in_front.article navBeta $(WEBSITE)/navAlpha
+	articleGen in_front.article
 	cp linklist1.png ..
 	cp linklist2.png ..
 	cp in_front.html ..
 
-in_middle.html:in_middle.txt navBeta $(WEBSITE)/navAlpha
-	-makepage.sh in_middle.txt
+in_middle.html:in_middle.article navBeta $(WEBSITE)/navAlpha
+	articleGen in_middle.article
 	cp linklist41.png ..
 	cp linklist42.png ..
 	cp linklist43.png ..
 	cp in_middle.html ..
 
 linklist_sol1.html:
-	-makepage.sh linklist_sol1.txt
+	articleGen linklist_sol1.article
 	cp linklist_sol1.html ..
 
 linklist_sol2.html:
-	-makepage.sh linklist_sol2.txt
+	articleGen linklist_sol2.article
 	cp linklist_sol2.html ..
 
-needlinklist.html: needlinklist.txt navBeta $(WEBSITE)/navAlpha
-	-makepage.sh needlinklist.txt
+needlinklist.html: needlinklist.article navBeta $(WEBSITE)/navAlpha
+	articleGen needlinklist.article
 	cp needlinklist.html ..
 
-enter_linklist.html:enter_linklist.txt navBeta $(WEBSITE)/navAlpha
-	-makepage.sh enter_linklist.txt
+enter_linklist.html:enter_linklist.article navBeta $(WEBSITE)/navAlpha
+	articleGen enter_linklist.article
 	cp enter_linklist.html ..
 clean:
+	-rm *.menu
 	-rm *.html -f
 	-rm *.c.txt

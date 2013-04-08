@@ -1,13 +1,13 @@
-FILE_NAME:in_middle.html
-TITLE:Link List Tutorial
-CONTENT_START:Adding elements in the middle of a list
-BEGINP
+
+* Link List Tutorial
+** Adding elements in the middle of a list
+
 Well, if you managed till here I must really applaud your
 patience. This section might be a bit tough, but I will try and keep
 it as simple as I can. 
-ENDP
 
-BEGINP
+
+
 As usual we start off by looking at some code. This time the program
 actually does some useful work it is an insertion sort program. The
 algorithm for insertion sort is really very simple. Our program
@@ -94,17 +94,17 @@ int main(){
   printList(first);
 }
 CODE_END
-ENDP
-BEGINP
+
+
 Phew! That was some bit of code. But never fear when Reuben is
   near. We will take that apart part by part. If you do notice this
   program has made use of both the concept's I've explained till
   now. That is inserting elements in the beginning and inserting
   elements at the end.
-ENDP
-FINIS
-CONTENT_START:The main function
-BEGINP
+
+
+** The main function
+
 CODE_START
 int main(){
   node *first=NULL;
@@ -113,26 +113,26 @@ int main(){
   printList(first);
 }
 CODE_END
-ENDP
-BEGINP
+
+
 This is simple all we do here is create a pointer to hold the list,
   then create an array to be sorted. Line 3 calls the sort
   function, and ofcourse you should know what Line 4 does by now.
-ENDP
-FINIS
 
 
-CONTENT_START:The InsertionSort function
 
-BEGINP
+
+** The InsertionSort function
+
+
 The work of this function is simple it just goes through the array
     calling the insert function which inserts the element in the right
     position. 
-ENDP
-FINIS
 
 
-CONTENT_START:The Insert function
+
+
+** The Insert function
 CODE_START
   node *new_node=(node *)malloc(sizeof(node));
   node *temp=first;
@@ -142,7 +142,7 @@ CODE_START
   new_node->next=NULL;
 CODE_END
 
-BEGINP
+
 Now we have the juicy part. This is the function where all the action
 happens. Let us start off by looking at the variables used.
 At line 0 as usual we create a new node for the list and in line 4 and
@@ -150,7 +150,7 @@ At line 0 as usual we create a new node for the list and in line 4 and
   variable which is used to traverse the list. In line 2 we have the
   temp1 variable that is used to traverse the list once we have
   traversed the list. I'll explain that statement in a while.
-ENDP
+
 
 CODE_START
   if(first==NULL){
@@ -159,11 +159,11 @@ CODE_START
   }
 
 CODE_END
-BEGINP
+
 The section of code above checks to see weather the element inserted
 is the first one or not. If it is the first one then the first pointer
 is made to point to it and the first pointer is returned.
-ENDP
+
 
 
 CODE_START
@@ -174,15 +174,15 @@ CODE_START
     }
   }
 CODE_END
-BEGINP
+
 If we escape the above "if" construct unscathed we land in to this
 weird looking for loop. This is a more compact way of traversing the
 list. Since we already assigned temp to first in the begining of the
 function we don't need to do it again. The condition for the loop is
 that temp must not become NULL, and next part of the loop is the
 actual traversal.
-ENDP
-BEGINP
+
+
 In the above code segment's if construct we check whether the number
 stored in the node greater than the number entered. If that is the
 case the we use the temp1 variable to traverse the list and stop in
@@ -193,7 +193,7 @@ SEP
 <CENTER>
 <img src="linklist41.png" alt="usage of temp1"/>
 </CENTER>
-ENDP
+
 
 CODE_START
   if(temp==first){
@@ -203,12 +203,12 @@ CODE_START
   }
 
 CODE_END
-BEGINP
+
 
 This section of code gets control when the while loop breaks. If it
 happens that the temp points to the first node. The new node is
 inserted at the begining of this list.
-ENDP
+
 
 CODE_START
   if(temp==NULL){
@@ -217,18 +217,18 @@ CODE_START
     return first;
   }
 CODE_END
-BEGINP
+
 The code above should be obvious. If temp is pointing to NULL that
 means that we are at the end of the list. Therefore, we insert the new
 node at the end of the list.
-ENDP
+
 
 CODE_START
   new_node->next=temp;
   temp1->next=new_node;
   return first;
 CODE_END
-BEGINP
+
 This is the intresting part. Here we insert the node in the middle of
 the list. We make new_node point to temp. Once this is done we make
 temp1's next pointer point to new_node. This is shown in the diagrams
@@ -239,14 +239,14 @@ below.SEP
 <CENTER>
 <img src="linklist43.png" alt="in the middle of the list">
 </CENTER>
-ENDP
-BEGINP
+
+
 I think that all there is to the program once you have mastered this
 section and the previous section you should be able to write simple
 programs that make use of link lists. In the next few sections I will
 be concentrating on removing elements from a link list.
-ENDP
-FINIS
 
-NAVALPHA
-NAVBETA
+
+
+
+

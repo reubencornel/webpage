@@ -1,7 +1,7 @@
-FILE_NAME:linklist_sol2.html
-TITLE:Link List Tutorial
-CONTENT_START:Solution
-BEGINP
+
+* Link List Tutorial
+** Solution
+
 CODE_START
 node *addToEnd(node *first,char name[],int roll_no){
   node *new_node=(node *)malloc(sizeof(node));
@@ -29,8 +29,8 @@ node *addToEnd(node *first,char name[],int roll_no){
 }
 
 CODE_END
-ENDP
-FINIS
 
-NAVALPHA
-NAVBETA
+
+
+
+

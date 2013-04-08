@@ -1,7 +1,7 @@
-FILE_NAME:linklist_sol1.html
-TITLE:Link List Tutorial
-CONTENT_START:Solution
-BEGINP
+
+* Link List Tutorial
+** Solution
+
 CODE_START
 #include<stdio.h>
 #include<string.h>
@@ -83,7 +83,7 @@ int main(){
 }
 CODE_END
 If you are clever enough you should be able to use this code with out using a text editor to remove the line numbers.
-ENDP
-FINIS
-NAVALPHA
-NAVBETA
+
+
+
+

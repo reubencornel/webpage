@@ -1,7 +1,7 @@
-FILE_NAME:at_end.html
-TITLE:Link List Tutorial
-CONTENT_START:Adding elements at the end of the list
-BEGINP
+
+* Link List Tutorial
+** Adding elements at the end of the list
+
 If you have mastered the traversing the link list in the last section,
 you will find it very useful in this section. Let us look at the code
 in the section below. You can download the source code <a
@@ -52,16 +52,16 @@ int main(){
   printList(first);	
 }
 CODE_END
-ENDP
-BEGINP
+
+
 To add an element to the end of a list we need to traverse it,
     starting from the first node going right up to the node whose
     "next" pointer points to NULL. This is because, the last node's
     "next" pointer will always be NULL. Once we reach this node we
     just have to make the "next" pointer point to our new node. Our
     new node now becomes the last node.
-ENDP
-BEGINP
+
+
 Let us look at the function <code>addToEnd</code>. We start of by
     assigning a temporary variable "temp" to the first node. Once this
     is done we traverse the list till the end this is done using the
@@ -70,7 +70,7 @@ Let us look at the function <code>addToEnd</code>. We start of by
     field of the node to which temp is pointing to and assign it to
     the address of the new node. The figure below shows the same in a pictorial form
 
-ENDP
+
 
 <CENTER>
 <IMG src="linklist31.png" alt="Pictorial form of above operation">
@@ -83,14 +83,14 @@ ENDP
 <CENTER>
 <IMG src="linklist33.png" alt="Pictorial form of above operation">
 </CENTER>
-FINIS
-CONTENT_START:Try Solving this...
-BEGINP
+
+** Try Solving this...
+
 In the last section I gave a problem to add a name and a number to the
 begining of a list. Now add a function to add the same at the end of
 the list. The solution is avaliable <a href="linklist_sol2.html">here</a>
-ENDP
 
-FINIS
-NAVALPHA
-NAVBETA
+
+
+
+
