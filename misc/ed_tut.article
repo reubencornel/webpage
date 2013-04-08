@@ -1,6 +1,6 @@
-FILE_NAME:ed_tutorial.html
-TITLE:An ed Tutorial
-CONTENT_START:
+
+* An ed Tutorial
+** 
 <!-- Talk about different types of editors -->
 <!--  	Screen Editors			   -->
 <!-- 	Line Editors			   -->
@@ -12,13 +12,13 @@ CONTENT_START:
 <!-- 	deleting lines			   -->
 <!--    Changing lines			   -->
 <!-- Talk about regular expressions	   -->
-BEGINP
+
 A programmer spends most of his life on a text editor. This could be
 in the form of a ultra complex GUI based IDE or the simple venerable
 vi. A text editor can be defined as a tool that allows you to enter
 text,modify it and do a whole lot of other operations. 
-ENDP
-BEGINP
+
+
 There are essentially 2 types of text editors.<br>
 SEP
 1) <b>Line editors</b>: These were the first editors to be
@@ -32,6 +32,6 @@ screen and the you can move around the text using arrow keys or editor
 specific keys. Examples of such editors are emacs and vi. 
 
 <h2>Why do we have to study ed</h2>
-FINIS
-NAVALPHA
-NAVBETA
+
+
+

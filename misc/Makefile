@@ -1,10 +1,11 @@
 target:misc
 
-misc:seg_fault.html k1000_rally.html misc1.html ed_tutorial.html anthem.html sbcl_compile.html complexdefn.html
-	menuconvert navbeta navBeta
+misc:navbeta.menu seg_fault.html k1000_rally.html misc.html ed_tutorial.html anthem.html sbcl_compile.html complexdefn.html
 	make glossary
 	-cp *.html ..
 
+navbeta.menu: navbeta
+	menuconvert navbeta navBeta	
 
 sbcl_compile.html: compile_sbcl.page navBeta
 	pagegen compile_sbcl.page
@@ -26,22 +27,22 @@ ed_tutorial.html: ed.page
 	mv op ed_tutorial.html  
 	cp ed_tutorial.html ..
 
-complexdefn.html: complexdefn.article
+complexdefn.html: complexdefn.article ../navAlpha
 	articleGen complexdefn.article
 
 glossary:../glossary/glossary
 	cat glossary >> ../glossary/glossary
 
-misc1.html:misc.txt ../navAlpha
-	-makepage.sh misc.txt
-	cp misc1.html ..	
+misc.html:misc.article ../navAlpha
+	articleGen misc.article
+	cp misc.html ..	
 
-seg_fault.html:seg_fault.txt ../navAlpha
-	-makepage.sh seg_fault.txt
+seg_fault.html:seg_fault.article ../navAlpha
+	articleGen seg_fault.article
 	cp seg_fault.html ..
 
-k1000_rally.html:k1000_rally.txt ../navAlpha
-	-makepage.sh k1000_rally.txt
+k1000_rally.html:k1000_rally.article ../navAlpha
+	articleGen k1000_rally.article
 	cp k1000_rally.html ..
 clean:
 	-rm *.html

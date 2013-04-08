@@ -1,14 +1,14 @@
-FILE_NAME:seg_fault.html
-TITLE:Debugging Segmentation Faults
-CONTENT_START:
-BEGINP
+
+* Debugging Segmentation Faults
+** 
+
 When you are a computer science student doing a practical exam, a
 <GLOSSARY segmentation fault> can be your worst nightmare, that is if
 you don't  know how to debug it. And with the case of most VTU students the 
 previous statement holds good. This page is dedicated to giving you
 probably the most primitive method to debug segmentation faults.
-ENDP
-BEGINP
+
+
 The minute you get a segmentation fault. Do as follows<br>
 1) Get to shell prompt and type <b>'ulimit -c unlimited'</b>. This command
 sets the <GLOSSARY core file> to an unlimited size. Otherwise this is
@@ -31,9 +31,9 @@ variables. <br><br>
 better position to debug your program.<br><br>
 6) You can type <b>q</b> to exit the debugger.
 
-ENDP
-FINIS
 
-NAVALPHA
 
-NAVBETA
+
+
+
+
