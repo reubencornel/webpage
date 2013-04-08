@@ -29,8 +29,3 @@ node *addToEnd(node *first,char name[],int roll_no){
 }
 
 CODE_END
-
-
-
-
-

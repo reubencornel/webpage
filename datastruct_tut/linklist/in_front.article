@@ -6,6 +6,8 @@ This is probably the first operation you have to be through with. Once
 this is understood throughly the rest would be a pushover. Take a look
 at code below this is a program that is used to add elements to the
 begining of the list. 
+
+
 CODE_START
 #include<stdio.h>
 
@@ -55,7 +57,6 @@ int main(){
   printList(first);
 }
 CODE_END
-
 
 
 
@@ -113,8 +114,6 @@ you first point the "first" pointer to the new node you will lose the
 address of the next node. Ergo, you will have nowhere to point the new
 node to.
 
-
-
 ** the printList() Function
 
 This is the most standard way you would be traversing any linked
@@ -139,15 +138,3 @@ Try your best to solve the problem above. Only as the last resort use
 this <a href="linklist_sol1.html">solution</a>. If you have a
 <GLOSSARY segmentation fault> problem you can see how to debug it <a
 href="seg_fault.html">here</a>
-
-
-
-
-
-
-
-
-
-
-
-

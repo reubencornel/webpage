@@ -1,6 +1,6 @@
 
 * Why do we need link lists
-** 
+
 
 First we need to see why are link lists needed in the first place. We
 could comfortably use arrays and get on with life. But the problem
@@ -41,7 +41,6 @@ the program puts out a <GLOSSARY segmentation fault> message. This message occur
 when ever a program tries to use a part of the memory that has not
 been allocated to it. As in this case we fill up 50 values in an array
 of size 10 and try accessing the part we have not allocated. Although this may work, as in not give a segmentation fault, its behaviour would be unpredictable. Its probably not a good idea to use it because the unallocated memory could be written over with out warning and the program could behave unexpectedly.
-
 
      
 This program should work for small values of i like 6 to 10 without

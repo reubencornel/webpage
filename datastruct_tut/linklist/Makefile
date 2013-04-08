@@ -45,36 +45,48 @@ at_end.html:at_end.article navBeta $(WEBSITE)/navAlpha
 	cp linklist31.png ..
 	cp linklist32.png ..
 	cp linklist33.png ..
+	code.pl < at_end.article > op.article
+	cp at_end.article at_end.article.backup
+	mv op.article at_end.article
 	articleGen at_end.article
+	mv at_end.article.backup at_end.article
 	cp at_end.html ..
 
 in_front.html:in_front.article navBeta $(WEBSITE)/navAlpha
+	code.pl <in_front.article >op.article
+	cp in_front.article in_front.article.backup
+	mv op.article in_front.article
 	articleGen in_front.article
+	mv in_front.article.backup in_front.article
 	cp linklist1.png ..
 	cp linklist2.png ..
 	cp in_front.html ..
 
 in_middle.html:in_middle.article navBeta $(WEBSITE)/navAlpha
+	code.pl < in_middle.article >op.article
+	cp in_middle.article in_middle.article.backup
+	mv op.article in_middle.article
 	articleGen in_middle.article
+	mv in_middle.article.backup in_middle.article
 	cp linklist41.png ..
 	cp linklist42.png ..
 	cp linklist43.png ..
 	cp in_middle.html ..
 
 linklist_sol1.html:
-	articleGen linklist_sol1.article
+	generatePage linklist_sol1.article
 	cp linklist_sol1.html ..
 
 linklist_sol2.html:
-	articleGen linklist_sol2.article
+	generatePage linklist_sol2.article
 	cp linklist_sol2.html ..
 
 needlinklist.html: needlinklist.article navBeta $(WEBSITE)/navAlpha
-	articleGen needlinklist.article
+	generatePage needlinklist.article
 	cp needlinklist.html ..
 
 enter_linklist.html:enter_linklist.article navBeta $(WEBSITE)/navAlpha
-	articleGen enter_linklist.article
+	generatePage enter_linklist.article
 	cp enter_linklist.html ..
 clean:
 	-rm *.menu

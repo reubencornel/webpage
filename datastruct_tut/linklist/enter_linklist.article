@@ -1,18 +1,16 @@
 
 * Enter Link Lists
-** 
 
 We already have seen how effective using array were in handling 
 data structures. Now we shall see how we can tackle the similar 
 program using linklists.
-
-
 
 Link lists are essentially a list of dynamically allocated nodes of
 memory. These nodes are generally C structures that consist of the
 data of the node and one or more pointers depending on the type of
 data structure. Below shown is a typical example of a node in a link
 list.
+
 CODE_START
 struct node{
 int n;

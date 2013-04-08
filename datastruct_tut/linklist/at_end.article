@@ -1,11 +1,12 @@
-
 * Link List Tutorial
+
 ** Adding elements at the end of the list
 
 If you have mastered the traversing the link list in the last section,
 you will find it very useful in this section. Let us look at the code
 in the section below. You can download the source code <a
 href="linklist3.c.txt">here</a>. 
+
 CODE_START
 #include<stdio.h>
 struct node{
