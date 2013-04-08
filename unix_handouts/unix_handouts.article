@@ -1,19 +1,17 @@
-FILE_NAME:unix_handouts.html
-TITLE:UNIX Handouts
-CONTENT_START:
-BEGINP
+* UNIX Handouts
+
 I had an chance to give a set lectures(something which I love doing) to a set
 of people at office. This set of lectures was on UNIX. If you know me,
 you would know how passionate I am about this.
-ENDP
 
-BEGINP
+
+
 So I decided to split up the task into 4 sessions. The intention of the
 programme was to give the participants a firm grounding from where they
 could go on their own, instead of spoon feeding them everything.
-ENDP
 
-BEGINP
+
+
 When I was given the requirements for the sessions I decided that I
 would split up the sessions as listed below.<br><br>
 
@@ -22,31 +20,24 @@ would split up the sessions as listed below.<br><br>
  Shell Programming <br>
  Perl <br>
 
-ENDP
 
-BEGINP
+
+
 The most salient point of the entire exercise was that I used printed
 handouts instead of the normal power point presentations. This was done
 with the intention that people could use the handouts as reference
 material later on.
-ENDP
 
-BEGINP
+
+
 This was a right decision, I still get people telling me that was one of
 the most innovative ideas they had seen in a  long time. The handouts helped
 them a lot when they were actually writing some code for some project.
-ENDP
 
-BEGINP
+
+
 There are two sets of handouts, one for the instructor and another for
 the student. You can download a copy of the handouts from the menu of the right of
 the page. 
-ENDP
 
-BEGINP
 I have also written up a tutorial on using the "ed" text editor <a href="ed_tutorial.html">here</a>.
-ENDP
-FINIS
-
-NAVALPHA
-NAVBETA

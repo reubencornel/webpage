@@ -1,0 +1,11 @@
+(NAVBETA
+'("Sed and Regular Expressions Instructor Handout" "session1_ih.pdf")
+'("Sed and Regular Expressions Student Handout" "session1_nh.pdf")
+'("Awk instructor handout" "session2_ih.pdf")
+'("Awk student handout" "session2_nh.pdf")
+'("Shell Programming instructor handout" "session3_ih.pdf")
+'("Shell Programming student handout" "session3_nh.pdf")
+'("Perl instructor handout" "session4_ih.pdf")
+'("Perl student handout" "session4_nh.pdf")
+'("Ed tutorial" "ed_tutorial.html")
+)
