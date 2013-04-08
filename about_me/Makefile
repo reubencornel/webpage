@@ -2,8 +2,9 @@ target:aboutme
 
 aboutme:aboutme.html 
 
-aboutme.html:aboutme.txt navBeta $(WEBSITE)/navAlpha
-	makepage.sh aboutme.txt
+aboutme.html:aboutme.article navBeta $(WEBSITE)/navAlpha
+	menuconvert navbeta navBeta
+	articleGen aboutme.article
 	cp house.jpg ..
 	-cp *.pdf ..
 	cp aboutme.html ..
