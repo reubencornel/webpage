@@ -1,29 +1,29 @@
-FILE_NAME:trouble_shooting.html
-TITLE:Trouble Shooting Linux
-CONTENT_START:Dealing with linux problems
-BEGINP
+
+* Trouble Shooting Linux
+** Dealing with linux problems
+
 This page is dedicated to trouble shooting Linux problems. Mainly due
 to public demand.
-ENDP
 
-BEGINP
+
+
 The problems here are the ones which my friends and me faced most
 often. These include installing windows over your Linux boot manager,
 belting up your graphical environment beyond repair.
-ENDP
-FINIS
 
-CONTENT_START: WARNING
-BEGINP
+
+
+**  WARNING
+
 All the solutions here are to the best of my knowledge. You are trying
 all the solutions here at your own risk. I am not responsible if
 anything goes wrong.
-ENDP
-FINIS
 
-NAVALPHA
 
-NAVBETA
+
+
+
+
 
 
 

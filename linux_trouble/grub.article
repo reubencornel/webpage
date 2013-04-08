@@ -1,16 +1,16 @@
-FILE_NAME: grub.html
-TITLE: GRUB Trouble
-CONTENT_START: You installed windows over GRUB
 
-BEGINP
+*  GRUB Trouble
+**  You installed windows over GRUB
+
+
   This was one of the most common problem faced by us. We all know how
  very stable windows is. Even a sneeze during installation of some
   software can cause the system to crash, or better still the system
   got bored with the work its doing to it decided to take a break. As
   a result we get the famed "Blue screen of death".
-ENDP
 
-BEGINP
+
+
   One probable solution to set the system right is to reinstall
   windows . Our college sys admin believes this is the ultimate to
   solution to any problem in windows or any other OS. The problem
@@ -20,29 +20,29 @@ BEGINP
   result after the installation the windows boot loader writes over the
   <GLOSSARY GRUB> boot loader one the most commonly used boot loaders. As a
   result you can't boot into the other OS.
-ENDP
 
-BEGINP
+
+
   The solution to this is very simple. I assume you are using Redhat
   Linux, or any other distribution based on it. This could be Fedora,
   PC Quest Linux etc. All you need is the first CD of the
   distribution.
-ENDP
 
-BEGINP
+
+
   Boot from the CD ROM drive with the first CD in the drive.
-ENDP
 
-BEGINP
+
+
   As soon as you get the ':' prompt press F5. This will take you to a
   screen which tell you about rescue mode so on and so forth.
-ENDP
 
-BEGINP
+
+
   At the ':' prompt type 'Linux rescue'
-ENDP
 
-BEGINP
+
+
   After this the installer (anaconda) will take you through a series
   of dialog boxes just go with the default options. As some point of
   time it will detect the Linux partition and ask you which mode you
@@ -50,26 +50,26 @@ BEGINP
   mode. After all the dialogs you are left at a shell prompt
 
   here type
-ENDP
 
-BEGINP
+
+
   chroot /mnt/sysimage
-ENDP
 
-BEGINP
+
+
   then 
-ENDP
-BEGINP
+
+
   grub-install /dev/hda (if you have installed the boot loader on the
   MBR which is most likely) 
-  ENDP
-BEGINP
+  
+
   otherwise 
-ENDP
-BEGINP
+
+
   grub-install (partition) (if you have installed the boot loader on
   the first section of the partition)
-ENDP
-FINIS
-NAVALPHA
-NAVBETA
+
+
+
+
