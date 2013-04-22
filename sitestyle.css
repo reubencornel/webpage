@@ -11,7 +11,7 @@ body {
     background-color:white;
     margin:20px;
     padding:0px;
-    font: 12pt georgia, serif; /*14pt verdana, arial, helvetica, sans-serif;*/
+    font: 12pt arial, sans-serif, serif; /*14pt verdana, arial, helvetica, sans-serif;*/
     line-height: 1.5em;
 }
 h1 {
@@ -22,7 +22,7 @@ h1 {
 /*        color:#ccc;*/
 }
 h2 {
-    font:bold 14pt georgia, serif; /*verdana, arial, helvetica, sans-serif;*/
+    font:bold 14pt arial, serif; /*verdana, arial, helvetica, sans-serif;*/
     margin:0px 0px 5px 0px;
     padding:0px;
 }
@@ -37,11 +37,10 @@ p {
 
 a {
     
-    /*        color:#09c;*/
-    color: #0817FF;
-    /*        font-size:10pt;
-              font-family:verdana, arial, helvetica, sans-serif;
-              font-weight:600;*/
+/*    color: #0817FF; */
+/*    font-size:10pt; */
+    font-family:arial, verdana, helvetica, sans-serif;
+    font-weight:600; 
     text-decoration:none;
 }
 
@@ -66,9 +65,9 @@ a:hover {background-color:#b8b8bc;}
     position:relative; /* Position is declared "relative" to gain control of
 			  stacking order (z-index). */
 /*    width: auto;*/
-    width: 35%;
+    width: 50%;
     min-width:120px;
-    margin:0px 40% 20px 30%;
+    margin:0px 40% 20px 25%;
     background-color:white;
     padding:10px;
     text-align:justify;
@@ -139,9 +138,9 @@ body>#navBeta {width:150px;
 
 
 #Header {
-    margin:50px 40% 10px 30%;
+    margin:50px 40% 10px 25%;
     padding:17px 0px 20px 20px;
-    width: 35%;
+    width: 50%;
     alignment: center;
            /* For IE5/Win's benefit height = [correct height] + [top padding] +
 	      [top and bottom border widths] */

@@ -1,13 +1,15 @@
+About|aboutme.html
+Articles|articles.html
+Projects|projects.html
 #Basic Programming|basic_programming.html
-Whats New|whats_new.html
-About Me|aboutme.html
-Cooking|cooking.html
-Photos|photoalbum.html
+#Cooking|cooking.html
+#Photos|photoalbum.html
 #Link List Tutorial|linklist.html
-Data structures|ds.html
-Trouble Shooting Linux|trouble_shooting.html
-Scripts used to Generate this Site|page_script.html
-My Projects|project.html
-Miscellaneous|misc1.html
-Unix Handouts|unix_handouts.html
-Home Sweet Home|index.html
+#Data structures|ds.html
+#Trouble Shooting Linux|linux_trouble.html
+#Scripts used to Generate this Site|page_script.html
+#My Projects|project.html
+Miscellaneous|misc.html
+#Unix Handouts|unix_handouts.html
+Whats New|whats_new.html
+Home|index.html
