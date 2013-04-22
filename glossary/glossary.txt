@@ -29,49 +29,6 @@ BEGINP
 <b></b>
 ENDP
 <a name= "
-AWK"/>
-BEGINP
-<b>
-AWK</b>
-It is an acronym for Aho, Weinberger and Kernighan. This is a small
-text processing language with C syntax. It mainly used to process
-files which have a structured format.
-
-ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
-<a name= "
-sed"/>
-BEGINP
-<b>
-sed</b>
-Stands for stream editor. It is a extremely powerful tool for unix
-text processing although it commands look like it was created in the age of
-the dinosaurs.
-
-ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
-<a name= "
-perl"/>
-BEGINP
-<b>
-perl</b>
-Is acronym for Practical Extraction and Report Language. I would like
-to call it the swiss army knife langauge. If you are using GNU/linux
-and want an intro on the language type 'perldoc perlintro' at the
-shell prompt.
-
-ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
-<a name= "
 GRUB"/>
 BEGINP
 <b>
