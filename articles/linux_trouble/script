@@ -1,0 +1,8 @@
+#!/bin/bash
+makepage.sh linux_trouble.txt
+makepage.sh grub.txt
+makepage.sh xwin.txt
+makepage.sh hp_pav.txt
+makepage.sh root_pwd.txt
+cp *.html ..
+rm *.html

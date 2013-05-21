@@ -1,0 +1,60 @@
+FILE_NAME:sangeet.html
+TITLE:Database Project
+CONTENT_START:Sangeet
+BEGINP
+This project is called Sangeet and was done in my 6th semester as a
+part of the database project. The main purpose of the project was to
+serve as a music store management software. It was <b>completely</b>
+implemented in Linux.
+ENDP
+BEGINP
+It provided features which other projects provided apart from that it
+had a feature to rip 30 seconds of every track from a CD and make an
+entry in the database.  When a user wanted to sample a song he could
+search the database and play back the required song. The reports were
+implemented using <GLOSSARY perl>.
+ENDP
+BEGINP
+I put too many details about the project as it was designed
+graphically. I can assist you by putting up some places where you can
+look for reading material. 
+ENDP
+FINIS
+CONTENT_START:PostgreSQL Rant
+BEGINP
+First I implemented the project using My SQL. But then at a later
+stage I found out that it did not fully support the standard SQL. That
+means no things like views, actions etc... Then I switched to
+PostgreSQL. The problem was that some SQL queries were not compatible
+so I changed them. After compiling I realised that the bloody project
+refused to connect the database. I was getting desperate. So after
+searching the net like crazy I came across a solution. And here it is.
+ENDP
+BEGINP
+1) Login as root and su into the user postgres SEP
+2) Create a new user account in the database using
+<b>createuser</b> SEP
+3) Type <b>exit</b> at the prompt so that you are back as root. SEP
+4) Edit a file in the path <b>/var/lib/postgres/data</b> called
+<b>postgresql.conf</b> SEP
+5) Edit the section of the file which is <b>Connection and
+Authentication</b>. And uncomment all the lines in  this section. SEP
+6) Save and exit this file. In the same path there will be another
+file called <b>pg_hba.conf</b> edit this file and make the following
+entry SEP
+local  all all trust SEP
+7) Save and quit the editor. SEP
+8) Restart the database server.
+FINIS
+ENDP
+CONTENT_START:Reading Material
+BEGINP
+To start up I hope you are thorough with your DBMS basics. This is
+probably one of the most important requirements. For documentation on
+how to use the QT toolkit the best place is the on line help which is
+available with QT designer. Work out 2 or 3 examples till you manage
+to get  the hang of it.
+ENDP
+FINIS
+NAVALPHA
+NAVBETA

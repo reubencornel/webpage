@@ -1,0 +1,131 @@
+FILE_NAME:yate.html
+TITLE:Curses based Text editor
+CONTENT_START:YATE - Yet Another Text Editor
+BEGINP
+This project is one of my all time favourite projects. It was
+developed in my 5th semester and is the biggest of all my 
+projects. It
+is about 6000 lines of C++ code. Its main features are that it is
+completely menu based although all menu choices have appropriate
+shortcuts. It has an inbuilt spell checking system. In the following
+sections I will discuss how these could be implemented.
+ENDP
+FINIS
+
+CONTENT_START:Design Decisions
+BEGINP
+This is probably the most important part of any project. It decides
+the entire structure of your project. If your design is good not only
+will you be able to complete the project on time, moreover your code
+will be stable and reusable.
+ENDP
+BEGINP
+To start off, I decided I had to do my project in C++. There was one
+main reason that affected this decision. It was that C++ was object
+oriented which considerably reduces complexity of the
+project. Moreover the Standard Template Library <GLOSSARY STL> 
+of C++
+made short work of all the coding in the project.
+ENDP
+BEGINP
+Next I decided on a data structure. I choose a list of lists as the
+data structure for the text editor. Though I don't remember why 
+I chose
+it but I did definitely experiment with other data structures 
+like a
+single list etc..
+I will discuss the main classes in my editor in the following sections
+ENDP
+FINIS
+
+CONTENT_START:The Menu Class
+BEGINP
+I had to choose between the menu library
+provided my ncurses or write my own. I chose the later as the library
+provided by ncurses did not satisfy my specific requirements. So I
+wrote a simple menu class that took in a list of strings as an
+argument, the number of strings, the x and y position of the 
+menu as
+constructor arguments. Once this was done all I had to do was I 
+had to
+call a method called GetChoice() which returned the selected 
+number to
+me. I did not bother about saving the portion of the screen on which
+the menu was drawn as I could refresh the text below and the 
+menu would
+disappear. It was much more simple than saving that portion of the
+screen in the memory and redrawing it back.
+ENDP
+FINIS
+
+CONTENT_START:The File System Browser
+BEGINP
+As in any text editor I had a File system browser. This was 
+again a
+simple class that displayed all the files in a directory. I used the
+up and down arrow keys for selection. It returned the name of 
+the file
+that had been selected with the full path.
+ENDP
+FINIS
+
+CONTENT_START:The Dialog Class
+BEGINP
+This class was used to display simple dialog boxes to display
+information and take input from users if there was a need for it.
+ENDP
+FINIS
+
+CONTENT_START:The Data structure Class
+BEGINP
+The data structure was implemented as a class. The main reason 
+for this
+was that I could have multiple instances of this class to edit
+multiple files. Thats how I implemented editing multiple files 
+at once
+in different instances of the data structure class. This also 
+had a
+display module. It had an interface which communicated with the spell
+checker class. All list manipulation was the work of this
+class. Whenever a key hit was detected by the interface and if 
+the key
+was not a shortcut the keyhit() method of the data structure of the
+class was called which called the appropriate function.
+ENDP
+FINIS
+
+CONTENT_START:The Spell Checker.
+BEGINP
+This is an absolutely brilliant class. I love it, because it was so
+simple. When somebody wanted the buffer spell checked the data
+structure created a new instance of the spell checker class. Then
+every line was converted from a C++ list to a simple C string and
+passed to the spell checker class that did the modification on the
+string and passed the modified string back. This was then 
+updated in
+the data structure.
+ENDP
+BEGINP
+I used the <b>pspell</b> spell checker library for the spell 
+checker engine.
+ENDP
+FINIS
+
+CONTENT_START:Reading Material
+BEGINP
+I hope you are confortable with STL otherwise you can read <b>Herbert
+Schiltd's - Complete C++ Reference</b>
+ENDP
+BEGINP
+For starters on curses I suggest you start up by reading 
+<b>Pradeep Padala's -
+Ncurses Programming HOWTO</b>. 
+ENDP
+BEGINP
+I suggest you buy a copy of <b>The Linux Programming Bible - John
+Goerzen</b>. I find this an extremely useful and a well written book
+which covers nearly all aspects of programming in Linux.
+ENDP
+FINIS
+NAVALPHA
+NAVBETA

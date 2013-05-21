@@ -1,0 +1,15 @@
+;; Object linux_trouble/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linux_trouble/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags '(("target" function (:arguments ("linux_trouble")) nil [1 86]) ("linux_trouble" function (:arguments ("grub.html" "hp_pav.html" "trouble_shooting.html" "root_pwd.html" "xwin.html")) nil [152 250]) ("glossary" function (:arguments ("../glossary/glossary")) nil [250 319]) ("xwin.html" function (:arguments ("xwin.txt" "navBeta" "../navAlpha")) nil [394 474]) ("root_pwd.html" function (:arguments ("root_pwd.txt" "navBeta" "../navAlpha")) nil [474 571]) ("trouble_shooting.html" function (:arguments ("linux_trouble.txt" "navBeta" "../navAlpha")) nil [571 694]) ("grub.html" function (:arguments ("grub.txt" "navBeta" "../navAlpha")) nil [694 775]) ("hp_pav.html" function (:arguments ("hp_pav.txt" "navBeta" "../navAlpha")) nil [776 865]) ("clean" function nil nil [867 888]))
+    :file "Makefile"
+    :pointmax 888
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

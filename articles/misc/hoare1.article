@@ -1,0 +1,31 @@
+* An axiomatic basis for computer programming
+
+** Abstract
+
+# no-toc
+
+In this paper an attempt is made to explore the logical founda-
+tions of computer programming by use of techniques which
+were first applied in the study of geometry and have later
+been extended to other branches of mathematics. This in-
+volves the elucidation of sets of axioms and rules of inference
+which can be used in proofs of the properties of computer
+programs. Examples are given of such axioms and rules, and
+a formal proof of a simple theorem is displayed. Finally, it is
+argued that important advantages, both theoretical and prac-
+tical, may follow from a pursuance of these topics.
+
+** Introduction
+
+Computer programming is an exact science, that is in theory we can
+deduce the the properties of a program by applying pure deductive
+logic. The aim of this paper is to clearly state the axioms that we
+can apply when we reason about programs.
+
+To expound what he is trying to describe he uses as a basis a
+limited set of mathematical axioms based on positive integers or non
+negative numbers. 
+
+He argues that the most basic property of a program is whether or not
+it executes what its user asks is to do.
+

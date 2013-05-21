@@ -1,0 +1,5 @@
+segmentation fault|
+This occurs because a program violates its memory restriction, by
+trying to read or write to a  part of the memory that does not belong
+to it. This page tell you <a href="seg_fault.html">how to debug seg faults</a>
+%%

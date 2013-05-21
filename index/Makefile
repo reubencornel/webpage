@@ -6,13 +6,19 @@ all:index.html
 
 index.html:index ../navAlpha navBeta
 #	-makepage.sh index
-	menuconvert navbeta navBeta
-	articleGen index.article
-	cp designemacs.jpg ..
-	cp *.png ..
-	cp *.jpg ..
-	cp index.html ..
-	cp sitestyle.css ..
+	@echo "Converting navbeta..."
+	@menuconvert navbeta navBeta
+	@echo "Generating index page..."
+	@articleGen index.article
+	@echo "Moving files..."
+	@cp designemacs.jpg ..
+	@cp *.png ..
+	@cp *.jpg ..
+	@cp index.html ..
+	@cp sitestyle.css ..
+	@echo "Done"
 
 clean:
-	-rm *.html -f
+	@echo "Cleaning index..."
+	@-rm -f *.html 
+	@echo "Done"

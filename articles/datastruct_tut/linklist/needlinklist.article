@@ -1,0 +1,64 @@
+
+* Why do we need link lists
+
+
+First we need to see why are link lists needed in the first place. We
+could comfortably use arrays and get on with life. But the problem
+with arrays is that it allocates memory statically. As a result when
+we require to use programs where we don't know that amount of data
+that is going to be input we can not use arrays. As an example take a
+look at the program below.  You can copy and paste the program below
+in an editor and compile it, and run it.
+
+
+
+CODE_START
+#include<stdio.h>
+int main(){
+  /*variable declaration*/
+  int i=0;
+ int list[5];
+ int entry_number=0;
+  int limit=50;
+ 
+  /*fill up list up to the brim*/
+  for(i=0;i<limit;i++){
+ list[i]=entry_number;
+   entry_number++;
+}
+
+  /*try printing the list*/
+  for(i=0;i<limit;i++){
+    printf("%d\n",list[i]);
+  }	
+}
+CODE_END
+
+
+
+If you are using gnu/Linux you will see that after displaying 50 numbers
+the program puts out a <GLOSSARY segmentation fault> message. This message occurs
+when ever a program tries to use a part of the memory that has not
+been allocated to it. As in this case we fill up 50 values in an array
+of size 10 and try accessing the part we have not allocated. Although this may work, as in not give a segmentation fault, its behaviour would be unpredictable. Its probably not a good idea to use it because the unallocated memory could be written over with out warning and the program could behave unexpectedly.
+
+     
+This program should work for small values of i like 6 to 10 without
+getting a seg fault. I feel that when the OS allocates
+memory  for the array it gives it approximately one page there is
+always a little extra memory that the program can use. I'm not very
+sure about that reason if someone can clarify it I will make the necessary changes.
+
+
+
+As we can see from above we can see that it is not possible to use
+array for programs where we have variable memory requirements.
+
+
+
+This program can be downloaded from <a href="array.c.txt">here</a>.
+
+
+
+
+

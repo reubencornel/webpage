@@ -1,0 +1,35 @@
+FILE_NAME:photo_angadi.html
+TITLE:Graphics Editor
+CONTENT_START:
+BEGINP
+This project was also done during the 6th semester as a 
+part of the curriculum. The main thing about this was that the 
+project implementation was compelete in barely 3 days. Though it 
+was so fast it was comfortably one of the most stable and 
+best looking projects in the class. Some of the features of the 
+project were that the image icons were not written as code as 
+done in some editors. As as example if other people have to write a 
+button with an icon on it the icon is written as a part of 
+the code which makes moving the button to some 
+other part of the screen if necessary very difficult. This 
+project again was implemented using C++ becuse of the object 
+oriented features provided by the language. This is one project that 
+I can say is totally object oriented. Even the mouse pointer was an 
+object. 
+ENDP
+BEGINP
+Below I will discuss some of the implementation issues.
+ENDP
+FINIS
+
+CONTENT_START:The Button Icons
+This was an intresting facet of the project by which I could create 
+most attractive buttons  skdlksjdlkjskldfkls lksjldk fsldkj flsdkfj lskdj fl
+FINIS
+
+NAVALPHA
+
+NAVBETA
+
+
+

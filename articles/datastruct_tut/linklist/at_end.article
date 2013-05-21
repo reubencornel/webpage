@@ -1,0 +1,97 @@
+* Link List Tutorial
+
+** Adding elements at the end of the list
+
+If you have mastered the traversing the link list in the last section,
+you will find it very useful in this section. Let us look at the code
+in the section below. You can download the source code <a
+href="linklist3.c.txt">here</a>. 
+
+CODE_START
+#include<stdio.h>
+struct node{
+  int n;
+  struct node *next;
+};
+typedef struct node node;
+
+node* addToEnd(node *first,int n){
+  node *new_node=(node *)malloc(sizeof(node));
+  node *temp=first;
+
+  new_node->n=n;
+  new_node->next=NULL;
+
+  if(first==NULL){
+    first=new_node;
+    return new_node;
+  }
+
+  while(temp->next!=NULL){
+    temp=temp->next;
+  }
+  temp->next=new_node;
+  return first;
+}
+
+void printList(node *first){
+  node *temp=first;
+  while(temp!=NULL){
+    printf("%d\n",temp->n);
+    temp=temp->next;
+  }
+}
+
+
+int main(){
+  node *first=NULL;
+  int i=0;
+
+  for(i=0;i<50;i++){
+    first=addToEnd(first,i);
+  }
+  printList(first);	
+}
+CODE_END
+
+
+To add an element to the end of a list we need to traverse it,
+    starting from the first node going right up to the node whose
+    "next" pointer points to NULL. This is because, the last node's
+    "next" pointer will always be NULL. Once we reach this node we
+    just have to make the "next" pointer point to our new node. Our
+    new node now becomes the last node.
+
+
+Let us look at the function <code>addToEnd</code>. We start of by
+    assigning a temporary variable "temp" to the first node. Once this
+    is done we traverse the list till the end this is done using the
+    <code>while</code> loop. At the end of the loop temp will be
+    pointing to the last node. All we have to do is use the "next"
+    field of the node to which temp is pointing to and assign it to
+    the address of the new node. The figure below shows the same in a pictorial form
+
+
+
+<CENTER>
+<IMG src="linklist31.png" alt="Pictorial form of above operation">
+</CENTER>
+
+<CENTER>
+<IMG src="linklist32.png" alt="Pictorial form of above operation">
+</CENTER>
+
+<CENTER>
+<IMG src="linklist33.png" alt="Pictorial form of above operation">
+</CENTER>
+
+** Try Solving this...
+
+In the last section I gave a problem to add a name and a number to the
+begining of a list. Now add a function to add the same at the end of
+the list. The solution is avaliable <a href="linklist_sol2.html">here</a>
+
+
+
+
+

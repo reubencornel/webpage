@@ -1,0 +1,21 @@
+#!/bin/bash
+makepage.sh *.txt
+#fig2ps --nogv linklist1.fig
+#fig2ps --nogv linklist2.fig
+#fig2ps --nogv linklist3.fig
+
+#ps2image -png linklist1.ps
+#ps2image -png linklist2.ps
+#ps2image -png linklist3.ps
+
+cp *.html ..
+cp *.png ..
+cp array.c ../array.c.txt
+cp linklist1.c ../linklist1.c.txt
+cp linklist2.c ../linklist2.c.txt
+cp linklist3.c ../linklist3.c.txt
+
+rm *.html
+rm *.bak
+#rm *.png
+rm *.ps

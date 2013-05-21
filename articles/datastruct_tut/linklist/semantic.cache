@@ -1,0 +1,33 @@
+;; Object linklist/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linklist/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-mode
+    :tags '(("target" function (:arguments ("linklist_tutorial")) nil [22 49]) ("linklist_tutorial" function (:arguments ("at_end.html" "in_front.html" "linklist_sol1.html" "linklist_sol2.html" "needlinklist.html" "enter_linklist.html" "linklist.html" "array.c.txt" "linklist1.c.txt" "linklist2.c.txt" "linklist3.c.txt" "in_middle.html" "linklist4.c.txt")) nil [49 292]) ("linklist4.c.txt" function (:arguments ("linklist4.c")) nil [436 520]) ("figures" function nil nil [520 553]) ("array.c.txt" function (:arguments ("array.c")) nil [542 606]) ("linklist1.c.txt" function (:arguments ("linklist1.c")) nil [606 690]) ("linklist2.c.txt" function (:arguments ("linklist2.c")) nil [690 774]) ("linklist3.c.txt" function (:arguments ("linklist3.c")) nil [774 858]) ("glossary" function (:arguments ("$(WEBSITE)/glossary/glossary")) nil [859 943]) ("linklist.html" function (:arguments ("linklist.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [943 1047]) ("at_end.html" function (:arguments ("at_end.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [1047 1209]) ("in_front.html" function (:arguments ("in_front.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [1209 1355]) ("in_middle.html" function (:arguments ("in_middle.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [1355 1529]) ("linklist_sol1.html" function nil nil [1529 1608]) ("linklist_sol2.html" function nil nil [1608 1687]) ("needlinklist.html" function (:arguments ("needlinklist.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [1687 1808]) ("enter_linklist.html" function (:arguments ("enter_linklist.txt" "navBeta" "$(WEBSITE)/navAlpha")) nil [1808 1940]) ("clean" function nil nil [1935 1967]))
+    :file "Makefile"
+    :pointmax 1967
+    )
+   (semanticdb-table "linklist.html"
+    :major-mode 'html-helper-mode
+    :tags '(("Reuben's Webpage" section nil nil [278 381]) ("Link list Tutorial" section (:members (("Link list Tutorial" section (:members (("About Me" section nil nil [1064 1113]) ("Link List Tutorial" section nil nil [1113 1173]) ("Trouble Shooting Linux" section nil nil [1173 1245]) ("Scripts used to Generate this
+Site" section nil nil [1245 1324]) ("My Projects" section nil nil [1324 1376]) ("Miscellaneous" section nil nil [1376 1427]) ("Whats New" section nil nil [1427 1479]) ("Home Sweet Home" section nil nil [1479 1557]) ("Link List Tutorial
+Home" section nil nil [1557 1622]) ("Why do we need Link lists??" section nil nil [1622 1695]) ("Enter The Link List" section nil nil [1695 1762]) ("Insert Elements in the Front of a
+List" section nil nil [1762 1842]) ("Insert Elements at the End of the
+List" section nil nil [1842 1920]) ("Insert Elements in the Middle of the
+List" section nil nil [1920 1923]))) nil [415 418]))) nil [381 386]))
+    :file "linklist.html"
+    :pointmax 2026
+    )
+   (semanticdb-table "linklist1.c"
+    :major-mode 'c-mode
+    :tags '(("node" type (:members (("element" variable (:type "int") (reparse-symbol classsubparts) [34 46]) ("next" variable (:pointer 1 :type ("node" type (:type "struct") nil nil)) (reparse-symbol classsubparts) [49 67])) :type "struct") nil [19 70]) ("node" type (:typedef ("node" type (:type "struct") nil nil) :superclasses "node" :type "typedef") nil [72 97]) ("addToBegining" function (:pointer 1 :arguments (("first" variable (:pointer 1 :type ("node" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [119 131]) ("num" variable (:type "int") (reparse-symbol arg-sub-list) [131 139])) :type ("node" type (:type "class") nil nil)) nil [99 360]) ("printList" function (:arguments (("first" variable (:pointer 1 :type ("node" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [377 389])) :type "void") nil [362 492]) ("main" function (:type "int") nil [495 621]))
+    :file "linklist1.c"
+    :pointmax 622
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

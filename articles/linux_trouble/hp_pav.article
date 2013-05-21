@@ -1,0 +1,79 @@
+
+* Installing Linux on a HP Pavilion
+**  
+
+
+You got a new HP Pavilion with lots of snazzy features, but you have a
+little problem you just cannot install Linux without making use of
+those precious rescue CD's provided by HP. The results of this are not
+very nice. Your carefully crafted partitions are flushed away by the
+'format' commode. Leaving you with only two partition one having
+Windows and another having rescue data.
+
+
+
+If what I have described above is the problem then you have come to
+the right place. 
+
+
+
+To start up I suggest you run the rescue discs once
+more and set the system to its orignal setting.
+
+
+
+Get a copy of partition magic and install it on windows and format the
+partition having the rescue data. Then from the Main windows partition
+create two partitions 
+
+
+<ul>
+<li>1) for Linux create this partition after taking into consideration the
+   size of the swap partition.
+<li>2) create another partition of size say 20-30 or what ever is the
+   minimum recommeded by partition magic.
+</ul>
+<br>
+
+
+Get a copy of XOSL(This is a bloody brillant piece of software). Get a
+fresh floppy make sure its bootable. Unzip XOSL and copy it onto the
+floppy.
+
+
+
+
+Boot from the floppy and start XOSL(I think you have to type setup or
+something like that otherwise do a 'dir' and look for a '.exe' file and
+type its name) 
+
+
+
+This should start up the XOSL setup. Once you have managed
+this.Some where along the line the program will ask you if you want to
+install XOSL on a dedicated partion of its own or on the MBR select
+the choice with the option of installing on the dedicated
+partition. Then somewhere along the line it will show you what it
+would install. In the list you should find an option to install
+'Ranish partition manager' deselect this option. And let the setup
+continue. Reboot the system after the install.
+
+
+
+You should get the new XOSL startup screen. Here click the "setup"
+button and add a Windows entry to the list of options and select the
+windows bootable partion. 
+
+
+
+When you install make sure that you install the bootloader on the
+first sector of the boot partition. When you reboot add another entry
+for linux. 
+
+
+
+
+
+
+
+

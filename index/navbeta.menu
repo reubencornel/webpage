@@ -1,0 +1,8 @@
+(NAVBETA
+'("<img src= \"designemacs.jpg\" alt=\"designed using Emacs\" />"
+  "http://www.gnu.org/software/emacs/")
+'("<center><img src= \"lisp_logo.png\" alt=\"Made with Lisp\" /></center>"
+  "http://www.lisp.org")
+'("<img src=\"sdf.jpg\" alt=\"Hosted on SDF\" height=\"150px\"/>"
+  "http://sdf.lonestar.org/")
+)
