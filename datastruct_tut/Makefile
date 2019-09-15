@@ -6,7 +6,7 @@ all:  navBeta.menu ds.html stacks.html bst.html ../navAlpha disjointsets.html
 	-cp *.png ..
 	-mv *.txt ..
 
-navBeta.menu: navbeta
+navBeta.menu: navBeta
 	menuconvert navbeta navBeta
 
 stacks.html: stacks.article navBeta.menu 

@@ -23,6 +23,7 @@ all:
 	-mv *.JPG website
 	-cp *.css website
 	-mv *.jpg website
+	-mv *.xml website
 	-mv *.pdf website
 	-mv *.tar.gz website
 #	#-cd website && tidyDirectory.sh

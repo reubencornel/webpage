@@ -1,7 +1,7 @@
 FILE_NAME:glossary.html
 TITLE:Glossary
 CONTENT_START:
-<a name= "STL"/>
+<a name= "STL"\/>
 BEGINP
 <b>STL</b>
 Standard Template Library is a library of most commonly used template
@@ -10,26 +10,8 @@ come in useful anytime. I read this from the <b>The C++ Complete
 Reference</b> by Herbert Schildt.
 
 ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
 <a name= "
-segmentation fault"/>
-BEGINP
-<b>
-segmentation fault</b>
-This occurs because a program violates its memory restriction, by
-trying to read or write to a  part of the memory that does not belong
-to it. This page tell you <a href="seg_fault.html">how to debug seg faults</a>
-
-ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
-<a name= "
-AWK"/>
+AWK"\/>
 BEGINP
 <b>
 AWK</b>
@@ -38,12 +20,8 @@ text processing language with C syntax. It mainly used to process
 files which have a structured format.
 
 ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
 <a name= "
-sed"/>
+sed"\/>
 BEGINP
 <b>
 sed</b>
@@ -52,12 +30,8 @@ text processing although it commands look like it was created in the age of
 the dinosaurs.
 
 ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
 <a name= "
-perl"/>
+perl"\/>
 BEGINP
 <b>
 perl</b>
@@ -67,12 +41,8 @@ and want an intro on the language type 'perldoc perlintro' at the
 shell prompt.
 
 ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
 <a name= "
-GRUB"/>
+GRUB"\/>
 BEGINP
 <b>
 GRUB</b>
@@ -80,12 +50,8 @@ The Grand Unified Boot Loader. This is an amazingly powerful
 bootloader. Very easy to configure, configuration file /etc/grub.conf
 
 ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
 <a name= "
-core file"/>
+core file"\/>
 BEGINP
 <b>
 core file</b>
@@ -94,12 +60,8 @@ program. In the days of yore, the RAM was referred to as core since
 most of it was magnetic core memory.
 
 ENDP
-<a name= ""/>
-BEGINP
-<b></b>
-ENDP
 <a name= "
-"/>
+"\/>
 BEGINP
 <b>
 </b>
