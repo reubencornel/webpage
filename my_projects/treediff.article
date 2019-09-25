@@ -1,0 +1,5 @@
+* Tree Diff
+
+This project was written from a need arising at work to figure out how to diff two trees. I was surprised that I could not find a library that implemented this algorithm, so I decided to implement this from scratch. You can find my attempt <a href="https://github.com/reubencornel/treediff">here</a>
+
+This code is based on the algorithm described in a paper titled <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.574.7411&rep=rep1&type=pdf">Change Detection in Hierarchically Structured Information</a> by Sudarshan Chawathe, Hector Garcia-Molina, Jennifer Widom, Anand Rajaraman. It was an easy read, but took me a while to implement it correctly. But boy did I have fun implementing it.

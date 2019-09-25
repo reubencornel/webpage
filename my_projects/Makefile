@@ -1,8 +1,10 @@
 target:my_projects
 
-my_projects: defending_london.html photo_angadi.html sangeet.html project.html yate.html fill.ico.txt
+my_projects: navBeta.menu treediff.html defending_london.html photo_angadi.html sangeet.html project.html yate.html fill.ico.txt
 	make glossary
 
+navBeta.menu: navBeta
+	menuconvert navbeta navBeta
 
 fill.ico.txt:fill.ico
 	cp fill.ico fill.ico.txt
@@ -30,6 +32,10 @@ project.html:project.txt navBeta ../navAlpha
 yate.html:yate.txt navBeta ../navAlpha
 	-makepage.sh yate.txt
 	cp yate.html ..
+
+treediff.html: treediff.article
+	articleGen treediff.article
+	cp treediff.html ..
 
 clean:
 	-rm *.html
