@@ -37,6 +37,7 @@ clean:
 	-rm *.menu
 	cd cooking && make clean
 	cd photo_album && make clean
+	cd whats_new && make clean
 	cd my_projects && make clean
 	cd datastruct_tut && make clean
 	cd page_scripts && make clean
