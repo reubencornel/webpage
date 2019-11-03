@@ -13,5 +13,7 @@ atom.xml:log
 
 
 clean:
+	-rm op
+	-rm log_temp
 	-rm *.html
 	-rm *.xml
