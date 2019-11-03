@@ -46,6 +46,7 @@ clean:
 	cd index && make clean
 	cd about_me && make clean
 	cd unix_handouts && make clean
+	cd glossary && make clean
 
 #this is simple. Just add an entry into the whats new page and make all
 final:
