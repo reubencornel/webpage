@@ -35,6 +35,7 @@ clean:
 	-rm *.png
 	-rm *.pdf
 	-rm *.menu
+	-cd website && rm *
 	cd cooking && make clean
 	cd photo_album && make clean
 	cd whats_new && make clean
@@ -47,6 +48,7 @@ clean:
 	cd about_me && make clean
 	cd unix_handouts && make clean
 	cd glossary && make clean
+
 
 #this is simple. Just add an entry into the whats new page and make all
 final:
