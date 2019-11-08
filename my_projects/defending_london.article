@@ -1,47 +1,35 @@
-FILE_NAME:defending_london.html
-TITLE:Java Project
-CONTENT_START:Defending London
-BEGINP
+* Defending London
+
+# no-toc
+
 This project was done as a part of my 7th Semester Curriculum. It is a
 Missile command clone, in a World War 2 setting. If you are not
 familiar with missile command, in simple terms it means that bombs are
 falling on your city and you have to destroy the bombs before they
 destroy the city.
-ENDP
-BEGINP
+
 It starts off during the 1940's when Hitler and his goons were going
 great guns (literally). They had taken over most of Europe and only
 Britain was the only nightmare in the valley of Hitler's Dreams. He
 wanted to take it over and started bombing the empire of the never
 setting sun. But little did he know that the small but capable Royal
 Air Force would junk his dreams in to the dustbin of history.
-ENDP
-BEGINP
+
 In this game you are in London and the German bombs are falling thick
 and fast. You have 2 very able anti-aircraft batteries under your
 control. Your objective is to destroy as many of the german bombs as
 possible. 
-ENDP
-BEGINP
+
 The main implementation of this project was completed in a round total
 of 3 days. After which it took 1 week to tune to perfection.
-ENDP
-FINIS
 
-CONTENT_START:Reading matter...
-BEGINP
+** Reading matter...
+
 This project took in a lot of documentation. I used a lot of sound
 effects in the project. I got help on this from a site of a kindly
 Professor called Richard Baldwin. I suggest you visit his <a
 href="http://www.dickbaldwin.com">site</a>. If you do visit this site
 sir, THANK YOU for the tutorials on your site.
-ENDP
-BEGINP
+
 I had other online material such as the open books published by
 O'reilly publishers on Java.
-ENDP
-FINIS
-
-NAVALPHA
-
-NAVBETA

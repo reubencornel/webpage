@@ -14,7 +14,7 @@ glossary:../glossary/glossary
 	cat glossary >>../glossary/glossary
 
 defending_london.html:defending_london.txt navBeta ../navAlpha
-	-makepage.sh defending_london.txt
+	articleGen defending_london.article
 	cp defending_london.html ..
 
 photo_angadi.html:photo_angadi.txt navBeta ../navAlpha
