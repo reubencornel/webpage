@@ -29,8 +29,8 @@ project.html:project.txt navBeta ../navAlpha
 	-makepage.sh project.txt
 	cp project.html ..
 
-yate.html:yate.txt navBeta ../navAlpha
-	-makepage.sh yate.txt
+yate.html:yate.article navBeta ../navAlpha
+	articleGen yate.article
 	cp yate.html ..
 
 treediff.html: treediff.article
