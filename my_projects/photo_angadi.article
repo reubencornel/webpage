@@ -1,7 +1,5 @@
-FILE_NAME:photo_angadi.html
-TITLE:Graphics Editor
-CONTENT_START:
-BEGINP
+*  Graphics Editor
+
 This project was also done during the 6th semester as a 
 part of the curriculum. The main thing about this was that the 
 project implementation was complete in barely 3 days. Though it 
@@ -16,20 +14,16 @@ project again was implemented using C++ because of the object
 oriented features provided by the language. This is one project that 
 I can say is totally object oriented. Even the mouse pointer was an 
 object. 
-ENDP
-BEGINP
-Below I will discuss some of the salient features of the project.
-ENDP
-FINIS
 
-CONTENT_START:The Button Icons
-BEGINP
+Below I will discuss some of the salient features of the project.
+
+** The Button Icons
+
 This was an interesting facet of the project by which I could create 
 most attractive buttons very easily. All I had to do was create a 
 file which had the colors of the individual pixels. This was a bit
 time consuming but I found a way to get around it.
-ENDP
-BEGINP
+
 What I did was I wrote another program that drew the buttons as such
 then another function in the program copied down the pixel positions
 into the file as a result I got a nice icon file. The main advantage
@@ -41,18 +35,15 @@ advantage of this method was that I got a very fine grained control
 over the pictures in the icons. I could manually edit the files to see
 that the icons were like how I wanted them to be. Below I have put an
 <a href="fill.ico.txt">example of a simple icon file</a>.
-ENDP
-FINIS
 
-CONTENT_START:File Saving Format
-BEGINP
+** File Saving Format
+
 This was a bit of innovativeness from my end. If you see the editors
 of other mortals you see that the size of the graphics file is no less
 than 250KB, even if the graphic is empty. But then you have my
 editor. The size of the file varies by the frequency of the number of
 colours appearing in the file.
-ENDP
-BEGINP
+
 I'll start by telling you how others save the graphics in their
 files. They read the pixels in one by one and write it directly this
 is no doubt simple but an unnecessary waste of disk space. What my
@@ -63,43 +54,27 @@ is different, then the previous colour and the counter value are
 written to the file. The counter is then reset to zero. This way the
 number of writes to the file is reduced thus <b>reducing disk space
 for a file and making the program very efficient</b>
-ENDP
-FINIS
 
-CONTENT_START:Spray Paint
-BEGINP
+** Spray Paint
+
 This is probably the stupidest thing people get foxed by. All you have
 to do is generate a random x and a random y for some given boundary
 conditions and translate the point position relative to the point
 position the mouse cursor. 
-ENDP
-BEGINP
+
 You can try this using MS Paint. Take the spray paint tool and hold it
 down on a point for some time continuously. You will see that it
 either forms a box or a cirle. The boundary of the box or the circle
 is the boundary condition for the random point. By varying the size of
 the boundary condition you can change the size of the spray paint
 "brush". 
-ENDP
-BEGINP
+
 Another thing is the density. This is again simple. You start up a
 small loop every time the spray paint gets control to generate the
 said number of random points. By increasing the value of the loop
 condition you can increase the density of the spray paint "brush".
-ENDP
-FINIS
 
-CONTENT_START:Reading Material
-BEGINP
+** Reading Material
+
 For starters you need to know the various algorithms. For this you can
 refer <b>Graphics Programming in C</b>. This book the 
-ENDP
-FINIS
-NAVALPHA
-
-NAVBETA
-
-
-
-
-

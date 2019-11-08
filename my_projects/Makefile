@@ -13,12 +13,12 @@ fill.ico.txt:fill.ico
 glossary:../glossary/glossary
 	cat glossary >>../glossary/glossary
 
-defending_london.html:defending_london.txt navBeta ../navAlpha
+defending_london.html:defending_london.article navBeta ../navAlpha
 	articleGen defending_london.article
 	cp defending_london.html ..
 
-photo_angadi.html:photo_angadi.txt navBeta ../navAlpha
-	-makepage.sh photo_angadi.txt
+photo_angadi.html:photo_angadi.article navBeta ../navAlpha
+	articleGen photo_angadi.article
 	cp photo_angadi.html ..
 
 sangeet.html:sangeet.txt navBeta ../navAlpha
