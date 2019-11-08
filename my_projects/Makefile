@@ -21,8 +21,8 @@ photo_angadi.html:photo_angadi.article navBeta ../navAlpha
 	articleGen photo_angadi.article
 	cp photo_angadi.html ..
 
-sangeet.html:sangeet.txt navBeta ../navAlpha
-	-makepage.sh sangeet.txt
+sangeet.html:sangeet.article navBeta ../navAlpha
+	articleGen sangeet.article
 	cp sangeet.html ..
 
 project.html:project.txt navBeta ../navAlpha
