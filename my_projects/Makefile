@@ -25,8 +25,8 @@ sangeet.html:sangeet.article navBeta ../navAlpha
 	articleGen sangeet.article
 	cp sangeet.html ..
 
-project.html:project.txt navBeta ../navAlpha
-	-makepage.sh project.txt
+project.html:project.article navBeta ../navAlpha
+	articleGen project.article
 	cp project.html ..
 
 yate.html:yate.article navBeta ../navAlpha
