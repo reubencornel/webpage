@@ -4,8 +4,9 @@ target:unix_handouts
 unix_handouts:unix_handouts.html
 
 #make the page using the holy script and move the html file one level back
-unix_handouts.html:unix_handouts.txt navBeta ../navAlpha *.pdf
-	-makepage.sh unix_handouts.txt
+unix_handouts.html:unix_handouts.article navBeta ../navAlpha *.pdf
+	menuconvert navbeta navBeta
+	articleGen unix_handouts.article
 	-cp unix_handouts.html ..
 	-cp *.pdf ..
 
