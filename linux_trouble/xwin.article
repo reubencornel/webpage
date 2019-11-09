@@ -1,0 +1,52 @@
+* You belted X windows to Kingdom Come
+
+
+This is another problem which at least I faced pretty regularly. I
+have a monitor that can support a resolution of 1024x768
+pixels. But the setup detected the resolution wrong as a result I
+had  a resolution of 800x600. Apart from that sometimes a few of
+my friends tried increasing the resolution of the monitor to a
+point which the monitor could not support as as result X windows
+would not start up.
+
+
+All the remedies to these maladies lie in the X windows
+configuration file. It can be found in the "/etc/X11" directory
+with the name "XF86Config*"(use reg ex) . Open the file using your
+favourite text editor. 
+
+
+
+Search for a section called "Screen". Once found add a subsection
+after the "DefaultDepth" entry. As follows (the entry given here
+is for me make modification to suit your hardware).
+
+
+	SubSection "Display"<br/>
+	&nbsp&nbsp	Depth		24<br/>
+	&nbsp&nbsp	Modes		"1024x768"<br/>
+	EndSubSection<br/>
+
+restart X windows.
+
+
+If you can't get to text mode because the xserver does not let you
+get there in that case you can get into run level 3(text multiuser
+mode) from the the grub prompt. To do this as soon as you get the
+GRUB screen select the line which you want to boot and press 'e'
+
+
+This will take you to a screen where the first line will be the
+partition which will be booted. The next line will generally be
+the kernel which be booted. Select this line again and press 'e'
+you to a prompt with the same line. Here get to the end of the
+line and type '3' and hit enter. You will be taken to the previous
+screen. Now press "b" to boot. Then  login as root and modify the
+XF86Config file.
+
+
+
+
+
+
+
