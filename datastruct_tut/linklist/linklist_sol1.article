@@ -1,8 +1,10 @@
-FILE_NAME:linklist_sol1.html
-TITLE:Link List Tutorial
-CONTENT_START:Solution
-BEGINP
-CODE_START
+* Link List Tutorial
+
+# no-toc
+
+** Solution
+
+<CODE>
 #include<stdio.h>
 #include<string.h>
 
@@ -80,10 +82,13 @@ int main(){
     first=addToBegining(first,name,roll_no);
   }
   printList(first);
-}
-CODE_END
+
+	     }
+</CODE>
+
+
 If you are clever enough you should be able to use this code with out using a text editor to remove the line numbers.
-ENDP
-FINIS
-NAVALPHA
-NAVBETA
+
+
+
+

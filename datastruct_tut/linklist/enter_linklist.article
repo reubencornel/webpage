@@ -1,43 +1,41 @@
-FILE_NAME:enter_linklist.html
-TITLE:Enter Link Lists
-CONTENT_START:
-BEGINP
+* Enter Link Lists
+
+# no-toc
+
 We already have seen how effective using array were in handling 
 data structures. Now we shall see how we can tackle the similar 
 program using linklists.
-ENDP
 
-BEGINP
+
+
 Link lists are essentially a list of dynamically allocated nodes of
 memory. These nodes are generally C structures that consist of the
 data of the node and one or more pointers depending on the type of
 data structure. Below shown is a typical example of a node in a link
 list.
-CODE_START
+
+
+<CODE-TAG>
 struct node{
 int n;
 struct node *next;
 };
-CODE_END
-ENDP
+</CODE-TAG>
 
 
-BEGINP
 All linklists have almost the similar operations. If you manage to get 
 the hang of using a singly linked list getting on to doubly linked 
 lists and other data structures would be a piece of cake.
-ENDP
 
-BEGINP
-The main operation that could be performed on a link list are SEP
-1) Adding Elements the end of the list.SEP
-2) Adding Elements to the begining of the list SEP
-3) Adding Elements in the middle of the list SEP
+The main operation that could be performed on a link list are <br/>
+1) Adding Elements the end of the list.<br/>
+2) Adding Elements to the begining of the list <br/>
+3) Adding Elements in the middle of the list <br/>
 4) Deleting elements from the above said positions.
-ENDP
-FINIS
 
 
-NAVALPHA
 
-NAVBETA
+
+
+
+
