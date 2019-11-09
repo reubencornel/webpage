@@ -1,7 +1,7 @@
 target:cooking
 
 cooking: cooking.html murghhar.html buffalo.html rasam.html peprrasam.html Murgh2Piaza.html
-	-cp *.html ..
+	-cp *.html $(WEBSITE)/website
 	make glossary
 
 rasam.html: rasam.page

@@ -7,8 +7,8 @@ unix_handouts:unix_handouts.html
 unix_handouts.html:unix_handouts.article navBeta ../navAlpha *.pdf
 	menuconvert navbeta navBeta
 	articleGen unix_handouts.article
-	-cp unix_handouts.html ..
-	-cp *.pdf ..
+	-cp unix_handouts.html $(WEBSITE)/website
+	-cp *.pdf $(WEBSITE)/website
 
 clean:
 	-rm *.html -f

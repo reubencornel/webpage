@@ -1,9 +1,9 @@
 target:photoalbum
 
 photoalbum: photoalbum.html easter.html washington.html 
-	-cp *.html ..
-	-cp *.jpg ..
-	-cp *.JPG ..
+	-cp *.html $(WEBSITE)/website
+	-cp *.jpg $(WEBSITE)/website
+	-cp *.JPG $(WEBSITE)/website
 	make glossary
 
 photoalbum.html: photoalbum.html
@@ -15,7 +15,7 @@ easter.html: easter.html
 
 washington.html: washington.html
 	pagegen washington.page
-	
+
 glossary: ../glossary/glossary
 	-cat glossary >> ../glossary/glossary
 

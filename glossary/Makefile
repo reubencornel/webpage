@@ -6,6 +6,6 @@ all:glossary
 	-cat glossary.html | tidy -o glo1.html
 	-cp glo1.html glossary.html
 	-rm glo1.html
-	cp glossary.html ..
+	cp glossary.html $(WEBSITE)/website
 clean:
-	rm *.html
+	-rm *.html

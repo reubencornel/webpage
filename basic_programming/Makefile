@@ -1,7 +1,7 @@
 target: datastructures
 
 datastructures: navBeta.menu stacks.html
-	-cp *.html ..
+	-cp *.html $(WEBSITE)/website
 
 navBeta.menu: navBeta
 	menuconvert navbeta navBeta

@@ -1,8 +1,8 @@
 target:whats_new
 
 whats_new:whats_new.html atom.xml
-	cp *.html ..
-	cp *.xml ..
+	cp *.html $(WEBSITE)/website
+	cp *.xml $(WEBSITE)/website
 
 whats_new.html:log $(WEBSITE)/navAlpha
 	cat log | awk -f ~/bin/makenew.awk > op

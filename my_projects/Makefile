@@ -8,34 +8,34 @@ navBeta.menu: navBeta
 
 fill.ico.txt:fill.ico
 	cp fill.ico fill.ico.txt
-	cp fill.ico.txt ..
+	cp fill.ico.txt $(WEBSITE)/website
 
 glossary:../glossary/glossary
 	cat glossary >>../glossary/glossary
 
 defending_london.html:defending_london.article navBeta ../navAlpha
 	articleGen defending_london.article
-	cp defending_london.html ..
+	cp defending_london.html $(WEBSITE)/website
 
 photo_angadi.html:photo_angadi.article navBeta ../navAlpha
 	articleGen photo_angadi.article
-	cp photo_angadi.html ..
+	cp photo_angadi.html $(WEBSITE)/website
 
 sangeet.html:sangeet.article navBeta ../navAlpha
 	articleGen sangeet.article
-	cp sangeet.html ..
+	cp sangeet.html $(WEBSITE)/website
 
 project.html:project.article navBeta ../navAlpha
 	articleGen project.article
-	cp project.html ..
+	cp project.html $(WEBSITE)/website
 
 yate.html:yate.article navBeta ../navAlpha
 	articleGen yate.article
-	cp yate.html ..
+	cp yate.html $(WEBSITE)/website
 
 treediff.html: treediff.article
 	articleGen treediff.article
-	cp treediff.html ..
+	cp treediff.html $(WEBSITE)/website
 
 clean:
 	-rm *.html

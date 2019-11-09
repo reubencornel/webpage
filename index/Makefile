@@ -4,14 +4,14 @@ target:all
 all:index.html
 
 
-index.html:index.article ../navAlpha navbeta.menu
-	menuconvert navbeta.menu
+index.html:index.article ../navAlpha
+	menuconvert navbeta navbeta.menu
 	articleGen index.article
-	cp designemacs.jpg ..
-	cp *.png ..
-	cp *.jpg ..
-	cp index.html ..
-	cp sitestyle.css ..
+	cp designemacs.jpg $(WEBSITE)/website
+	cp *.png $(WEBSITE)/website
+	cp *.jpg $(WEBSITE)/website
+	cp index.html $(WEBSITE)/website
+	cp sitestyle.css $(WEBSITE)/website
 
 clean:
 	-rm *.html -f

@@ -2,9 +2,9 @@ target:all
 
 all:  navBeta.menu ds.html stacks.html bst.html ../navAlpha disjointsets.html
 	cd linklist && make
-	-mv *.html ..
-	-cp *.png ..
-	-mv *.txt ..
+	-mv *.html $(WEBSITE)/website
+	-cp *.png $(WEBSITE)/website
+	-mv *.txt $(WEBSITE)/website
 
 navBeta.menu: navBeta
 	menuconvert navbeta navBeta

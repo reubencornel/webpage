@@ -13,7 +13,7 @@ glossary:../glossary/glossary
 
 page_script.html:navbeta.menu page_script.article ../navAlpha navBeta
 	generatePage page_script.article
-	cp page_script.html ..
+	cp page_script.html $(WEBSITE)/website
 
 clean:
 	rm -f *.html
