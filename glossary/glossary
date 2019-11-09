@@ -29,3 +29,67 @@ This is a dump of the contents of the memory locations that hold your
 program. In the days of yore, the RAM was referred to as core since
 most of it was magnetic core memory.
 %%
+AWK|
+It is an acronym for Aho, Weinberger and Kernighan. This is a small
+text processing language with C syntax. It mainly used to process
+files which have a structured format.
+%%
+sed|
+Stands for stream editor. It is a extremely powerful tool for unix
+text processing although it commands look like it was created in the age of
+the dinosaurs.
+%%
+perl|
+Is acronym for Practical Extraction and Report Language. I would like
+to call it the swiss army knife langauge. If you are using GNU/linux
+and want an intro on the language type 'perldoc perlintro' at the
+shell prompt.
+%%
+AWK|
+It is an acronym for Aho, Weinberger and Kernighan. This is a small
+text processing language with C syntax. It mainly used to process
+files which have a structured format.
+%%
+sed|
+Stands for stream editor. It is a extremely powerful tool for unix
+text processing although it commands look like it was created in the age of
+the dinosaurs.
+%%
+perl|
+Is acronym for Practical Extraction and Report Language. I would like
+to call it the swiss army knife langauge. If you are using GNU/linux
+and want an intro on the language type 'perldoc perlintro' at the
+shell prompt.
+%%
+AWK|
+It is an acronym for Aho, Weinberger and Kernighan. This is a small
+text processing language with C syntax. It mainly used to process
+files which have a structured format.
+%%
+sed|
+Stands for stream editor. It is a extremely powerful tool for unix
+text processing although it commands look like it was created in the age of
+the dinosaurs.
+%%
+perl|
+Is acronym for Practical Extraction and Report Language. I would like
+to call it the swiss army knife langauge. If you are using GNU/linux
+and want an intro on the language type 'perldoc perlintro' at the
+shell prompt.
+%%
+AWK|
+It is an acronym for Aho, Weinberger and Kernighan. This is a small
+text processing language with C syntax. It mainly used to process
+files which have a structured format.
+%%
+sed|
+Stands for stream editor. It is a extremely powerful tool for unix
+text processing although it commands look like it was created in the age of
+the dinosaurs.
+%%
+perl|
+Is acronym for Practical Extraction and Report Language. I would like
+to call it the swiss army knife langauge. If you are using GNU/linux
+and want an intro on the language type 'perldoc perlintro' at the
+shell prompt.
+%%
