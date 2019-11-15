@@ -21,12 +21,11 @@ all:
 	-mv *.png  website
 	-mv *.txt website
 	-mv *.JPG website
-	-cp *.css website
 	-mv *.jpg website
 	-mv *.xml website
 	-mv *.pdf website
 	-mv *.tar.gz website
-#	#-cd website && tidyDirectory.sh
+	-cd website && tidydirectory
 
 #clean up the mess left by the make process
 clean:

@@ -1,14 +1,17 @@
 target:photoalbum
 
-photoalbum: photoalbum.html easter.html washington.html 
+photoalbum: navbeta.menu photoalbum.html easter.html washington.html 
 	-cp *.html $(WEBSITE)/website
 	-cp *.jpg $(WEBSITE)/website
 	-cp *.JPG $(WEBSITE)/website
 	make glossary
 
-photoalbum.html: photoalbum.html
+
+navbeta.menu: navBeta
 	menuconvert navbeta navBeta
-	pagegen photoalbum.page
+
+photoalbum.html:  photoalbum.article
+	articleGen photoalbum.article
 
 easter.html: easter.html
 	pagegen easter.page
@@ -18,13 +21,6 @@ washington.html: washington.html
 
 glossary: ../glossary/glossary
 	-cat glossary >> ../glossary/glossary
-
-#ed_tutorial.html: ed.page
-#	sbcl --load ~/bin/menuconvert.fasl navbeta navBeta
-#	sbcl --load ~/bin/pagegen.fasl ed.page
-#	cat ed_tutorial.html | code-lisp.pl > op
-#	mv op ed_tutorial.html  
-#	cp ed_tutorial.html ..
 
 clean:
 	-rm *.html
