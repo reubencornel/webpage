@@ -1,21 +1,23 @@
 target:cooking
 
-cooking: cooking.html murghhar.html buffalo.html rasam.html peprrasam.html Murgh2Piaza.html
+cooking: navbeta.menu cooking.html murghhar.html buffalo.html rasam.html peprrasam.html Murgh2Piaza.html
 	-cp *.html $(WEBSITE)/website
 	make glossary
 
-rasam.html: rasam.page
-	pagegen rasam.page
+rasam.html: rasam.article
+	articleGen rasam.article
 
-cooking.html: cooking.page
+cooking.html: cooking.article
+	articleGen cooking.article
+
+navbeta.menu: navBeta
 	menuconvert navbeta navBeta
-	pagegen cooking.page
 
-murghhar.html: murghhar.page
-	pagegen murghhar.page
+murghhar.html: murghhar.article
+	articleGen murghhar.article
 
-buffalo.html: buffalo.page
-	pagegen buffalo.page
+buffalo.html: buffalo.article
+	articleGen buffalo.article
 
 peprrasam.html: peprrasam.article
 	articleGen peprrasam.article
