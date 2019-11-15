@@ -5,7 +5,7 @@ all:index.html
 
 
 index.html:index.article ../navAlpha
-	menuconvert navbeta navbeta.menu
+	menuconvert navbeta navBeta
 	articleGen index.article
 	cp designemacs.jpg $(WEBSITE)/website
 	cp *.png $(WEBSITE)/website

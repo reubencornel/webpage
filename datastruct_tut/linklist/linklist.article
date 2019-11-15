@@ -1,11 +1,12 @@
 * Link list Tutorial
 
+# no-toc
+
 This is a basic tutorial on how to create link lists in C and C++. I
 assume you are quite comfortable with pointers. If not I suggest you
-read the book BOLD Pointers in C by Yashwant Kanetkar ENDBOLD. If you
-have higher 
-IQ level I suggest you read chapter 5 of <b>The C Programming Language
-by Kernighan and Ritchie</b>.
+read Pointers in C by Yashwant Kanetkar.  Alternatively chapter 5
+of <b>The C Programming Language by Kernighan and Ritchie</b> makes
+for good reading.
 
 
 I might put up a pointer tutorial at some later point of

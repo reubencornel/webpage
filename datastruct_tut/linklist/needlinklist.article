@@ -12,7 +12,7 @@ in an editor and compile it, and run it.
 
 
 
-<CODE>
+<CODE-TAG>
 #include<stdio.h>
 int main(){
   /*variable declaration*/
@@ -32,7 +32,7 @@ int main(){
     printf("%d\n",list[i]);
   }	
 }
-</CODE>
+</CODE-TAG>
 
 
 

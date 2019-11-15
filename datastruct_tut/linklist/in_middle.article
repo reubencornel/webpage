@@ -18,7 +18,7 @@ algorithm, performance wise. The code can be downloaded <a
 							  href="linklist4.c.txt">here</a>.
 
 
-<CODE>
+<CODE-TAG>
 #include<stdio.h>
 //this macro calculates the size of the array for us
 //for eg if you pass it 10 element array. In Linux
@@ -95,7 +95,7 @@ int main(){
   first=InsertionSort(first,a,NELEM(a));
   printList(first);
 }
-</CODE>
+</CODE-TAG>
 
 
 Phew! That was some bit of code. But never fear when Reuben is
@@ -107,14 +107,14 @@ Phew! That was some bit of code. But never fear when Reuben is
 
 ** The main function
 
-<CODE>
+<CODE-TAG>
 int main(){
   node *first=NULL;
   int a[]={1,453,345,356,3,65,6,4645,4};
   first=InsertionSort(first,a,NELEM(a));
   printList(first);
 }
-</CODE>
+</CODE-TAG>
 
 
 This is simple all we do here is create a pointer to hold the list,
@@ -130,17 +130,16 @@ The work of this function is simple it just goes through the array
     position. 
 
 
-
-
 ** The Insert function
-<CODE>
+
+<CODE-TAG>
   node *new_node=(node *)malloc(sizeof(node));
   node *temp=first;
   node *temp1=first;
 
   new_node->n=number;
   new_node->next=NULL;
-</CODE>
+</CODE-TAG>
 
 
 Now we have the juicy part. This is the function where all the action
@@ -152,13 +151,13 @@ At line 0 as usual we create a new node for the list and in line 4 and
   traversed the list. I'll explain that statement in a while.
 
 
-<CODE>
+<CODE-TAG>
   if(first==NULL){
     first=new_node;
     return first;
   }
 
-</CODE>
+</CODE-TAG>
 
 The section of code above checks to see weather the element inserted
 is the first one or not. If it is the first one then the first pointer
@@ -166,14 +165,14 @@ is made to point to it and the first pointer is returned.
 
 
 
-<CODE>
+<CODE-TAG>
   for(;temp!=NULL;temp=temp->next){
     if(temp->n>number){
       for(;temp1->next!=temp;temp1=temp1->next);
       break;
     }
   }
-</CODE>
+</CODE-TAG>
 
 If we escape the above "if" construct unscathed we land in to this
 weird looking for loop. This is a more compact way of traversing the
@@ -195,14 +194,14 @@ SEP
 </CENTER>
 
 
-<CODE>
+<CODE-TAG>
   if(temp==first){
     new_node->next=first;
     first=new_node;
     return first;
   }
 
-</CODE>
+</CODE-TAG>
 
 
 This section of code gets control when the while loop breaks. If it
@@ -210,24 +209,24 @@ happens that the temp points to the first node. The new node is
 inserted at the begining of this list.
 
 
-<CODE>
+<CODE-TAG>
   if(temp==NULL){
     for(;temp1->next!=temp;temp1=temp1->next);
     temp1->next=new_node;
     return first;
   }
-</CODE>
+</CODE-TAG>
 
 The code above should be obvious. If temp is pointing to NULL that
 means that we are at the end of the list. Therefore, we insert the new
 node at the end of the list.
 
 
-<CODE>
+<CODE-TAG>
   new_node->next=temp;
   temp1->next=new_node;
   return first;
-</CODE>
+</CODE-TAG>
 
 This is the intresting part. Here we insert the node in the middle of
 the list. We make new_node point to temp. Once this is done we make
