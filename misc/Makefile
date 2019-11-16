@@ -10,13 +10,11 @@ navbeta.menu: navBeta
 sbcl_compile.html: compile_sbcl.article navBeta
 	generatePage compile_sbcl.article
 
-anthem.html: indian_anthem.page anthem.pdf
-	menuconvert navbeta navBeta
-	pagegen indian_anthem.page
+anthem.html: anthem.article anthem.pdf
+	generatePage anthem.article
 	-cp *.pdf $(WEBSITE)/website
 
 ed_tutorial.html: ed_tutorial.article
-	menuconvert navbeta navBeta
 	generatePage ed_tutorial.article
 	cat ed_tutorial.html | code-lisp.pl > op
 	mv op ed_tutorial.html  
