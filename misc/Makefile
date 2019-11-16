@@ -17,7 +17,7 @@ anthem.html: indian_anthem.page anthem.pdf
 
 ed_tutorial.html: ed.page
 	menuconvert navbeta navBeta
-	pagegen ed.page
+	generatePage ed_tutorial.article
 	cat ed_tutorial.html | code-lisp.pl > op
 	mv op ed_tutorial.html  
 
