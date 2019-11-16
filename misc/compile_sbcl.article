@@ -1,0 +1,53 @@
+* Generating an executable Lisp program using SBCL
+
+# no-toc
+
+
+Perhaps the most common question any newbie to lisp asks if
+there is a way to compile lisp code into an executable. The responses
+to that vary from a very vague kindoff, but why would you need such a
+thing to a go-buy-a-commercial-lisp. But before that I must inform you dear
+reader that I have tested this only on my Mac. I guess it will work on
+Linux but I have no idea if the same would work on Windows
+
+The other day I happened to be looking into the <a href="http://www.sbcl.org">sbcl</a> <a href="http://www.sbcl.org/manual">manual</a> and I
+stumbled across an api in sb-ext called <a href= "http://www.sbcl.org/manual/Saving-a-Core-Image.html#Saving-a-Core-Image">save-lisp-and-die"</a>
+. This function call saves the state of environment at that point of
+time along with all libraries to the disk. The point where this got
+interesting was when I read that I could pass it a keyword argument that
+could make the image executable.
+
+There are a couple of things to note about this function
+call.
+
+<ol>
+<li>This function all also needs an additional argument
+    called :toplevel. This argument is used to indicate the entry
+    point function for the program. Lets call this the main function.</li>
+<li>The main function must have an <b>explicit call</b>
+  to  (quit)."</li>
+</ol>
+
+Once you have have a main function all you need to do is to
+fire up sbcl. Load the project/file and then type in the following
+<b>"(sb-ext:save-lisp-and-die binary-name :executable t :toplevel
+'main)"</b>. This would dump out an image file which can be executed and
+that has the name "binary-name".
+
+The main drawback of this method is that the binary is HUGE. I
+found that the binary for the very simple hello world program on my
+computer is about 25 MB at the very least with out libraries. But
+then I would use it anyway cause the binary is a lot faster than
+having to wait for the interpreter to start up and then execute the
+script and perhaps more importantly if I wanted to distribute the
+the program I could always compile it and give it away without
+expecting people to know how to compile and use this program.
+
+
+<b>Later Edit:</b> Its been a while since I have been using
+lisp. From what I have figured the above function dumps a copy of
+the memory of the lisp interpreter and all libraries loaded at that
+point of time, hence the large binary.
+
+
+Further more you might want to check out Zach Beane's <a href=http://xach.com/lisp/buildapp/>buildapp.</a>

@@ -7,15 +7,15 @@ misc: navbeta.menu seg_fault.html k1000_rally.html misc.html ed_tutorial.html an
 navbeta.menu: navBeta
 	menuconvert navbeta navBeta
 
-sbcl_compile.html: compile_sbcl.page navBeta
-	pagegen compile_sbcl.page
+sbcl_compile.html: compile_sbcl.article navBeta
+	generatePage compile_sbcl.article
 
 anthem.html: indian_anthem.page anthem.pdf
 	menuconvert navbeta navBeta
 	pagegen indian_anthem.page
 	-cp *.pdf $(WEBSITE)/website
 
-ed_tutorial.html: ed.page
+ed_tutorial.html: ed_tutorial.article
 	menuconvert navbeta navBeta
 	generatePage ed_tutorial.article
 	cat ed_tutorial.html | code-lisp.pl > op
