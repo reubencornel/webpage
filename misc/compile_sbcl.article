@@ -43,11 +43,9 @@ script and perhaps more importantly if I wanted to distribute the
 the program I could always compile it and give it away without
 expecting people to know how to compile and use this program.
 
-
 <b>Later Edit:</b> Its been a while since I have been using
 lisp. From what I have figured the above function dumps a copy of
 the memory of the lisp interpreter and all libraries loaded at that
 point of time, hence the large binary.
-
 
 Further more you might want to check out Zach Beane's <a href=http://xach.com/lisp/buildapp/>buildapp.</a>
