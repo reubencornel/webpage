@@ -1,7 +1,7 @@
 target:linux_trouble
 #make all pages and output glossary listing into a file called 
 #glossary. The append the glossary file to the main glossary file
-linux_trouble:navbeta.menu grub.html hp_pav.html trouble_shooting.html root_pwd.html xwin.html
+linux_trouble:navbeta.menu grub.html hp_pav.html linux_trouble.html root_pwd.html xwin.html
 	make glossary
 
 
@@ -20,7 +20,7 @@ root_pwd.html:root_pwd.article navbeta.menu ../navAlpha
 	-generatePage root_pwd.article
 	cp root_pwd.html $(WEBSITE)/website
 
-trouble_shooting.html:linux_trouble.article  navbeta.menu ../navAlpha
+linux_trouble.html:linux_trouble.article  navbeta.menu ../navAlpha
 	-generatePage linux_trouble.article
 	cp linux_trouble.html $(WEBSITE)/website
 

@@ -34,7 +34,7 @@ disjointsets.html: disjointsets.article navBeta.menu
 	rm disjointsets_backup.article
 
 
-ds.html: datastructure.page navBeta.menu
-	-pagegen datastructure.page
+ds.html: ds.article navBeta.menu
+	-articleGen ds.article
 clean:
 	cd linklist && make clean
