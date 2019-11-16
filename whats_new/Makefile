@@ -4,9 +4,8 @@ whats_new:whats_new.html atom.xml
 	cp *.html $(WEBSITE)/website
 	cp *.xml $(WEBSITE)/website
 
-whats_new.html:log $(WEBSITE)/navAlpha
-	cat log | awk -f ~/bin/makenew.awk > op
-	-makepage.sh op
+whats_new.html:whats_new.article $(WEBSITE)/navAlpha
+	generatePage whats_new.article
 
 atom.xml:log
 	cat log | awk -f ~/bin/makeatom.awk > atom.xml
