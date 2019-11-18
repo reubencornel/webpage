@@ -17,6 +17,7 @@ all:
 	@cd whats_new && make
 	@cd about_me && make
 	@cd unix_handouts && make
+	@cd blog && make
 #	@-mv *.html website
 #	@-mv *.png  website
 #	@-mv *.txt website
@@ -34,7 +35,7 @@ clean:
 	@-rm *.png
 	@-rm *.pdf
 	@-rm *.menu
-	@-cd website && rm *
+	@-cd website && rm -rf *
 	@cd cooking && make clean
 	@cd photo_album && make clean
 	@cd whats_new && make clean
@@ -48,6 +49,7 @@ clean:
 	@cd unix_handouts && make clean
 	@cd glossary && make clean
 	@find . -name 'navbeta.menu' -exec rm {} \;
+
 
 
 #this is simple. Just add an entry into the whats new page and make all
