@@ -2,6 +2,10 @@
 
 # no-toc
 
+<b>[15 December 2019,10:18:40 AM PST]</b>
+
+Added a new <a href="blog.html">blog</a> section to the site. This has been in my mind for a while, finally got around to getting it done.
+
 <b>[November 15th 2019, Friday 23:56 PM PST]</b>
 
 Just completed a major refactor of the site. Now the site uses bootstrap for its css, lisp for all its code generation. We don't use any shell scripts

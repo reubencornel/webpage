@@ -48,6 +48,7 @@ clean:
 	@cd about_me && make clean
 	@cd unix_handouts && make clean
 	@cd glossary && make clean
+	@cd blog && make clean
 	@find . -name 'navbeta.menu' -exec rm {} \;
 
 
